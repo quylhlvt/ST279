@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/dimension_100"
+    app:cardElevation="@dimen/dimension_100">
+
+    <TextView
+        android:id="@+id/tvButton"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:paddingVertical="@dimen/dimension_5"
+
+        android:fontFamily="@font/londrina_solid_regular"
+        android:textColor="@color/app_color2"
+        android:textSize="@dimen/text_size_16"
+        tools:text="Next" />
+</FrameLayout>

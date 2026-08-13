@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "280311095073",
+    "project_id": "st287-avatar-maker-high-school",
+    "storage_bucket": "st287-avatar-maker-high-school.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:280311095073:android:dffff98937f48523526860",
+        "android_client_info": {
+          "package_name": "com.avatar.school.oc.stylish"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLKaFH4QnbAuAj8hAZZI0fHwl0Lh5IBxs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
