@@ -70,6 +70,7 @@
     <dimen name="dimension_120">180dp</dimen>
     <dimen name="dimension_140">210dp</dimen>
     <dimen name="dimension_150">225dp</dimen>
+    <dimen name="dimension_160">240dp</dimen>
     <dimen name="dimension_170">255dp</dimen>
     <dimen name="dimension_180">270dp</dimen>
     <dimen name="dimension_250">375dp</dimen>

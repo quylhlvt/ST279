@@ -4,39 +4,57 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="@dimen/dimension_8">
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/dimension_0"
+        android:layout_height="@dimen/dimension_0"
+        app:cardCornerRadius="@dimen/dimension_20"
 
+        app:layout_constraintStart_toStartOf="@+id/flMain"
+        app:layout_constraintEnd_toEndOf="@+id/flMain"
+        app:layout_constraintBottom_toBottomOf="@+id/flMain"
+        app:layout_constraintTop_toTopOf="@+id/flMain"
+    app:cardBackgroundColor="@color/transparent"
+        android:elevation="@dimen/dimension_1"
+        />
     <!-- Container chính — flat ConstraintLayout, không lồng -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/flMain"
-        app:layout_constraintTop_toTopOf="parent"
+
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimension_0"
+        android:elevation="@dimen/dimension_2"
+        android:padding="@dimen/dimension_1"
         app:layout_constraintDimensionRatio="3.28:0.56"
-        android:elevation="@dimen/dimension_2">
+        app:layout_constraintTop_toTopOf="parent">
+
         <View
             android:id="@+id/top18"
-            app:layout_constraintTop_toTopOf="parent"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dimension_0"
-            app:layout_constraintDimensionRatio="3.28:0.18"/>
- <View
+            app:layout_constraintDimensionRatio="3.28:0.18"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
             android:id="@+id/top20"
-            app:layout_constraintTop_toTopOf="parent"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dimension_0"
-            app:layout_constraintDimensionRatio="3.28:0.2"/>
-   <View
+            app:layout_constraintDimensionRatio="3.28:0.2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
             android:id="@+id/bottom18"
-            app:layout_constraintBottom_toBottomOf="parent"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dimension_0"
-            app:layout_constraintDimensionRatio="3.28:0.18"/>
- <View
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="3.28:0.18" />
+
+        <View
             android:id="@+id/bottom20"
-            app:layout_constraintBottom_toBottomOf="parent"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dimension_0"
-            app:layout_constraintDimensionRatio="3.28:0.2"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="3.28:0.2" />
+
 
         <ImageView
             android:id="@+id/imgLangFor"
@@ -50,23 +68,23 @@
             android:id="@+id/imvFlag"
             android:layout_width="@dimen/dimension_0"
             android:layout_height="@dimen/dimension_0"
-            app:layout_constraintDimensionRatio="1:1"
             android:layout_marginStart="@dimen/dimension_24"
             android:src="@drawable/ic_flag_english"
             app:layout_constraintBottom_toTopOf="@+id/bottom18"
+            app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintStart_toStartOf="@+id/imgLangFor"
-            app:layout_constraintTop_toBottomOf="@+id/top18"/>
+            app:layout_constraintTop_toBottomOf="@+id/top18" />
 
         <ImageView
             android:id="@+id/btnRadio"
             android:layout_width="@dimen/dimension_0"
             android:layout_height="@dimen/dimension_0"
-            app:layout_constraintDimensionRatio="1:1"
             android:layout_marginEnd="@dimen/dimension_24"
             android:src="@drawable/ic_select_lang"
-            app:layout_constraintTop_toBottomOf="@+id/top20"
+            app:layout_constraintBottom_toTopOf="@+id/bottom20"
+            app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toEndOf="@+id/imgLangFor"
-            app:layout_constraintBottom_toTopOf="@+id/bottom20" />
+            app:layout_constraintTop_toBottomOf="@+id/top20" />
 
         <TextView
             android:id="@+id/tvLang"

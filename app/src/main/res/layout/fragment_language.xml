@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/img_bg_lang"
-    tools:context="com.avatar.school.oc.stylish.com.avatar.school.oc.stylish.ui.language.LanguageFragment">
+    tools:context="com.avatar.school.oc.stylish.ui.language.LanguageFragment">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimension_0"
         android:layout_marginTop="@dimen/dimension_10"
         android:layout_marginBottom="@dimen/dimension_5"
-        android:layout_marginHorizontal="@dimen/dimension_18"
+        android:layout_marginHorizontal="@dimen/dimension_16"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layoutActionBar">
         <androidx.recyclerview.widget.RecyclerView
