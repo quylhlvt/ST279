@@ -1,17 +1,19 @@
 <resources>
     <string name="size_slider">Size</string>
     <string name="app_name">Avatar Maker: High School OC</string>
-    <string name="next">Next</string>
+    <string name="next">Next\u00A0</string>
     <string name="language">Language</string>
-    <string name="title_1">\u00A0Unlock your stylish &amp; classy look\u00A0</string>
-    <string name="title_2">\u00A0Add speech share thoughts\u00A0</string>
-    <string name="title_3">\u00A0Make your own avatar\u00A0</string>
+    <string name="title_1">\u00A0Turn Your Ideas into Anime Magic\u00A0</string>
+    <string name="title_2">\u00A0Amazing OC? Loading...\u00A0</string>
+    <string name="title_3">\u00A0Ready to Create Something Adorable?\u00A0</string>
     <string name="not_select_lang">Please select a language</string>
-    <string name="pony_maker">Avatar maker</string>
+    <string name="pony_maker">Anime Maker</string>
+    <string name="cat_random">Anime Random</string>
+    <string name="feature_not_available">This feature is not available yet</string>
     <string name="permission">Permission</string>
-    <string name="storage">Storage</string>
+    <string name="storage">Storage\u00A0</string>
     <string name="continue_per">\u00A0Continue\u00A0</string>
-    <string name="notification">Notification</string>
+    <string name="notification">Notification\u00A0</string>
     <string name="granted_notification">Notification permission granted</string>
     <string name="granted_storage">Storage permission granted</string>
     <string name="allow">\u00A0Allow</string>
@@ -32,8 +34,8 @@
     <string name="do_you_want_to_reset_all">Do you want to reset all?</string>
     <string name="reset">Reset</string>
     <string name="exit">Exit</string>
-    <string name="rate_us">Rate Us</string>
-    <string name="share_app">Share App</string>
+    <string name="rate_us">Rate us</string>
+    <string name="share_app">Share app</string>
     <string name="image_has_been_saved_successfully">Image has been saved successfully!</string>
     <string name="download">Download</string>
     <string name="my_avatar">Character</string>
@@ -78,9 +80,9 @@
     <string name="rate_us_0">You have not rated it yet!</string>
     <string name="have_rated">Thank you for rate our app</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="cosplay">Cosplay</string>
+    <string name="cosplay">Cosplay Anime</string>
     <string name="random">Random</string>
-    <string name="my_creation">Creation</string>
+    <string name="my_creation">My Creation</string>
     <string name="category">Category</string>
     <string name="image">Image</string>
     <string name="color">Color</string>

@@ -2,21 +2,19 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="@dimen/dimension_100"
-    app:cardElevation="@dimen/dimension_100">
+    android:clipToPadding="false"
+    android:clipChildren="false">
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvButton"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:gravity="center"
         android:includeFontPadding="false"
-        android:paddingVertical="@dimen/dimension_5"
-
-        android:fontFamily="@font/londrina_solid_regular"
-        android:textColor="@color/app_color2"
-        android:textSize="@dimen/text_size_16"
+        android:fontFamily="@font/pacifico_regular"
+        android:textColor="@color/app_color"
+        android:textSize="@dimen/text_size_24"
         tools:text="Next" />
 </FrameLayout>

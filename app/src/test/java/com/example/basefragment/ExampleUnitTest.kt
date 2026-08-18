@@ -1,4 +1,4 @@
-package com.avatar.school.oc.stylish
+package com.ava
 
 import org.junit.Test
 

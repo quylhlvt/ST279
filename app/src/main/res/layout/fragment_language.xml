@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/img_bg_lang"
-    tools:context="com.avatar.school.oc.stylish.ui.language.LanguageFragment">
+    tools:context="com.ava.ui.language.LanguageFragment">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimension_0"

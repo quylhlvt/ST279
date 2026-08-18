@@ -113,7 +113,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintDimensionRatio="3.12:0.32">
 
-                <com.avatar.school.oc.stylish.ui.main.add_character.HorizontalSizeSlider
+                <com.ava.ui.main.add_character.HorizontalSizeSlider
                     android:id="@+id/sizeSlider"
                     android:layout_marginVertical="@dimen/dimension_8"
                     android:layout_marginHorizontal="@dimen/dimension_28"

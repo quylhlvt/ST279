@@ -1,57 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:clipToOutline="false"
     android:clipToPadding="false"
     android:clipChildren="false"
     android:layout_height="match_parent">
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineBottom1"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.7" />
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineBottom2"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.8" />
+
     <ImageView
         android:id="@+id/imvImage"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dimension_0"
+        android:layout_height="0dp"
         android:scaleType="fitXY"
-        android:elevation="@dimen/dimension_1"
         android:src="@drawable/img_intro1"
-        app:layout_constraintBottom_toBottomOf="@+id/guidelineBottom1"
+        app:layout_constraintBottom_toTopOf="@+id/tvContent"
+        android:layout_marginBottom="@dimen/dimension_10"
         app:layout_constraintTop_toTopOf="parent" />
-<View
-    android:layout_width="match_parent"
-    android:layout_height="@dimen/dimension_0"
-    app:layout_constraintDimensionRatio="3.6:0.16"
-    android:id="@+id/view2"
-    app:layout_constraintTop_toBottomOf="@+id/guidelineBottom1"
-    />
-    <androidx.appcompat.widget.AppCompatTextView
+
+    <TextView
         android:id="@+id/tvContent"
         style="@style/single_marquee"
-        android:layout_width="@dimen/dimension_0"
-        android:layout_height="@dimen/dimension_0"
-        android:elevation="@dimen/dimension_2"
-        android:fontFamily="@font/londrina_solid_regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/dimension_18"
         android:gravity="center"
+        android:fontFamily="@font/pacifico_regular"
+        android:textColor="@color/app_color2"
+        app:outerStrokeWidth="1.5dp"
         android:includeFontPadding="true"
-        android:background="@drawable/bg_content_intro"
-        android:maxLines="1"
-        android:layout_marginHorizontal="@dimen/dimension_16"
-        android:textColor="@color/app_color"
-        android:textSize="@dimen/text_size_16"
-        app:layout_constraintBottom_toBottomOf="@+id/guidelineBottom2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view2"
-        app:outerStrokeColor="@color/app_color" />
+        app:outerStrokeColor="@color/app_color"
+        android:textSize="@dimen/text_size_20"
+        android:maxLines="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

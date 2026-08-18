@@ -13,7 +13,7 @@
     <color name="black2">#1F000000</color>
     <color name="black3">#33000000</color>
     <color name="black4">#333333</color>
-    <color name="black5">#4B4B4B99</color>
+    <color name="black5">#99242424</color>
     <color name="transparent">#00FFFFFF</color>
     <color name="orange_F6">#F68300</color>
     <color name="purple_F0">#F091F5</color>
@@ -21,9 +21,9 @@
     <color name="gray_dot">#B0B5BD</color>
     <color name="gray2">#A6A6A6</color>
     <color name="yellow_F6">#F6CD46</color>
-    <color name="app_color">#CC7600</color>
-    <color name="app_color2">#FF8C66</color>
-    <color name="app_color3">#FFB399</color>
+    <color name="app_color">#0C55A2</color>
+    <color name="app_color2">#50C8E8</color>
+    <color name="app_color3">#58DAF7</color>
     <color name="app_color4">#FFD9CC</color>
     <color name="app_color5">#FEF2EF</color>
     <color name="app_color6">#0087CC</color>

@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             >
 
-            <com.avatar.school.oc.stylish.core.extention.OuterStrokeTextView
+            <com.ava.core.extention.OuterStrokeTextView
                 android:id="@+id/tvTitle"
                 style="@style/single_marquee"
                 android:layout_width="match_parent"
@@ -130,7 +130,7 @@
                             android:scaleType="fitXY"
                             android:src="@drawable/btn_chossecolor" />
 
-                        <com.avatar.school.oc.stylish.core.extention.OuterStrokeShadownTextView
+                        <com.ava.core.extention.OuterStrokeShadownTextView
                             android:id="@+id/txtCancle"
                             style="@style/single_marquee"
                             android:layout_width="match_parent"
@@ -164,7 +164,7 @@
                             android:scaleType="fitXY"
                             android:src="@drawable/btn_chossecolor" />
 
-                        <com.avatar.school.oc.stylish.core.extention.OuterStrokeShadownTextView
+                        <com.ava.core.extention.OuterStrokeShadownTextView
                             android:id="@+id/txtSave"
                             style="@style/single_marquee"
                             android:layout_width="@dimen/dimension_0"

@@ -7,7 +7,7 @@
     android:background="@drawable/img_bg_lang"
     android:clipChildren="false"
     android:clipToPadding="false"
-    tools:context=".ui.main.show.ShowFragment">
+    tools:context="com.ava.ui.main.show.ShowFragment">
 
     <View
         android:id="@+id/view13"

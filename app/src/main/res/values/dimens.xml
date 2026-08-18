@@ -86,6 +86,7 @@
     <dimen name="text_size_24">24sp</dimen>
     <dimen name="text_size_26">26sp</dimen>
     <dimen name="text_size_28">28sp</dimen>
+    <dimen name="text_size_30">30sp</dimen>
     <dimen name="text_size_32">32sp</dimen>
     <dimen name="text_size_40">40sp</dimen>
     <dimen name="text_size_50">50sp</dimen>

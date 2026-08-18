@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:id="@+id/menuContainer"
+        android:layout_width="match_parent"
+        android:background="@drawable/bg_item_home"
+        android:layout_height="@dimen/dimension_0"
+        android:layout_marginBottom="@dimen/dimension_10"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintDimensionRatio="2.8:0.68">
+        <com.ava.core.extention.OuterStrokeTextView2
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/pony_maker"
+            android:fontFamily="@font/pacifico_regular"
+            android:textSize="@dimen/text_size_26"
+            android:layout_marginBottom="@dimen/dimension_8"
+            android:textColor="@color/white"
+            app:outerStrokeWidth="@dimen/dimension_2"
+            app:outerStrokeColor="@color/app_color"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

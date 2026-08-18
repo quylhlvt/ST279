@@ -20,7 +20,7 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
--keep class com.avatar.school.oc.stylish.data.model.api.** { *; }
+-keep class com.ava.data.model.api.** { *; }
 -keep class *.R
 
 -keepclasseswithmembers class **.R$* {
@@ -87,7 +87,7 @@
 -keep class * extends androidx.fragment.app.Fragment { *; }
 -keep class **.*Fragment { *; }
 -keep class androidx.navigation.** { *; }
--keep class com.avatar.school.oc.stylish.ui.** { *; }
+-keep class com.ava.ui.** { *; }
 -keep class dagger.hilt.** { *; }
 -keep class * implements dagger.hilt.internal.GeneratedComponent { *; }
 -dontwarn dagger.hilt.**

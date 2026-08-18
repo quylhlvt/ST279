@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/img_bg_lang"
-    tools:context=".ui.main.cosplay.CosplayFragment">
+    tools:context="com.ava.ui.main.cosplay.CosplayFragment">
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineBottom1"
         android:layout_width="match_parent"

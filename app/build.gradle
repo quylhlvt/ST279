@@ -10,13 +10,13 @@ plugins {
 }
 
 android {
-    namespace 'com.avatar.school.oc.stylish'
+    namespace 'com.ava'
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId "com.avatar.school.oc.stylish"
+        applicationId "com.ava"
         minSdk 24
         targetSdk 36
         versionCode 1

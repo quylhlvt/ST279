@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/app_color7"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.avatar.school.oc.stylish.ui.onboarding.splash.SplashFragment">
+    tools:context="com.ava.ui.onboarding.splash.SplashFragment">
 
 
     <androidx.appcompat.widget.AppCompatImageView

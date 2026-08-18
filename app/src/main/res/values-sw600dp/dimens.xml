@@ -11,6 +11,7 @@
     <dimen name="text_size_26">39sp</dimen>
     <dimen name="text_size_28">42sp</dimen>
     <dimen name="text_size_32">48sp</dimen>
+    <dimen name="text_size_30">51sp</dimen>
     <dimen name="text_size_40">60sp</dimen>
     <dimen name="text_size_50">75sp</dimen>
 </resources>

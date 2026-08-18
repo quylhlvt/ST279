@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.avatar.school.oc.stylish.ui.main.home.HomeFragment"
+        android:name="com.ava.ui.main.home.HomeFragment"
         android:label="Home"
         tools:layout="@layout/fragment_home">
         <action
@@ -59,7 +59,7 @@
 
     <fragment
         android:id="@+id/createPony"
-        android:name="com.avatar.school.oc.stylish.ui.main.createPony.ChoosePonyFragment"
+        android:name="com.ava.ui.main.createPony.ChoosePonyFragment"
         android:label="Create Pony"
         tools:layout="@layout/fragment_choose_pony">
         <action
@@ -75,7 +75,7 @@
     </fragment>
 <!--    <fragment-->
 <!--        android:id="@+id/quick"-->
-<!--        android:name="com.avatar.school.oc.stylish.ui.main.quick.QuickFragment"-->
+<!--        android:name="com.ava.ui.main.quick.QuickFragment"-->
 <!--        android:label="Quick"-->
 <!--        tools:layout="@layout/fragment_quick">-->
 <!--        <action-->
@@ -91,7 +91,7 @@
 <!--    </fragment>-->
     <fragment
         android:id="@+id/myPony"
-        android:name="com.avatar.school.oc.stylish.ui.main.myPony.MyPonyFragment"
+        android:name="com.ava.ui.main.myPony.MyPonyFragment"
         android:label="My Pony"
         tools:layout="@layout/fragment_my_pony">
         <action
@@ -126,7 +126,7 @@
     </fragment>
     <fragment
         android:id="@+id/custom"
-        android:name="com.avatar.school.oc.stylish.ui.main.customize.CustomizeFragment"
+        android:name="com.ava.ui.main.customize.CustomizeFragment"
         android:label="Custom"
         tools:layout="@layout/fragment_customize">
 
@@ -149,7 +149,7 @@
     </fragment>
     <fragment
         android:id="@+id/addCharacterFragment"
-        android:name="com.avatar.school.oc.stylish.ui.main.add_character.AddCharacterFragment"
+        android:name="com.ava.ui.main.add_character.AddCharacterFragment"
         android:label="fragment_add_character"
         tools:layout="@layout/fragment_add_character">
 
@@ -168,7 +168,7 @@
     </fragment>
     <fragment
         android:id="@+id/viewFragment"
-        android:name="com.avatar.school.oc.stylish.ui.main.view.ViewFragment"
+        android:name="com.ava.ui.main.view.ViewFragment"
         android:label="fragment_view"
         tools:layout="@layout/fragment_view">
 
@@ -208,7 +208,7 @@
     </fragment>
     <fragment
         android:id="@+id/cosplay"
-        android:name="com.avatar.school.oc.stylish.ui.main.cosplay.CosplayFragment"
+        android:name="com.ava.ui.main.cosplay.CosplayFragment"
         android:label="fragment_cosplay"
         tools:layout="@layout/fragment_cosplay">
 
@@ -222,7 +222,7 @@
     </fragment>
     <fragment
         android:id="@+id/show"
-        android:name="com.avatar.school.oc.stylish.ui.main.show.ShowFragment"
+        android:name="com.ava.ui.main.show.ShowFragment"
         android:label="fragment_show"
         tools:layout="@layout/fragment_show">
         <action
@@ -236,7 +236,7 @@
     </fragment>
     <fragment
         android:id="@+id/successCosplay"
-        android:name="com.avatar.school.oc.stylish.ui.main.successcosplay.SuccessCosplayFragment"
+        android:name="com.ava.ui.main.successcosplay.SuccessCosplayFragment"
         android:label="fragment_success_cosplay"
         tools:layout="@layout/fragment_success_cosplay">
         <action
@@ -261,7 +261,7 @@
     </fragment>
     <fragment
         android:id="@+id/random"
-        android:name="com.avatar.school.oc.stylish.ui.main.random.RandomFragment"
+        android:name="com.ava.ui.main.random.RandomFragment"
         android:label="fragment_random"
         tools:layout="@layout/fragment_random">
         <action
@@ -274,12 +274,12 @@
     </fragment>
 <!--    <fragment-->
 <!--        android:id="@+id/webViewFragment"-->
-<!--        android:name="com.avatar.school.oc.stylish.ui.main.webview.WebViewFragment"-->
+<!--        android:name="com.ava.ui.main.webview.WebViewFragment"-->
 <!--        android:label="fragment_web_view"-->
 <!--        tools:layout="@layout/fragment_web_view" />-->
     <fragment
         android:id="@+id/successFragment"
-        android:name="com.avatar.school.oc.stylish.ui.main.success.SuccessFragment"
+        android:name="com.ava.ui.main.success.SuccessFragment"
         android:label="fragment_success"
         tools:layout="@layout/fragment_success">
 

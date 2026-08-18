@@ -7,7 +7,7 @@
     android:background="@drawable/img_bg_lang"
     android:clipChildren="false"
     android:clipToPadding="false"
-    tools:context=".ui.main.successcosplay.SuccessCosplayFragment">
+    tools:context="com.ava.ui.main.successcosplay.SuccessCosplayFragment">
 
 
     <FrameLayout

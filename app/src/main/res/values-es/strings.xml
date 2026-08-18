@@ -3,7 +3,7 @@
 <resources>
     <string name="size_slider">Tamaño</string>
     <string name="app_name">Avatar Maker: High School OC</string>
-    <string name="next">Siguiente</string>
+    <string name="next">Siguiente\u00A0</string>
     <string name="language">Idioma</string>
     <string name="title_1">\u00A0Descubre tu estilo elegante y con clase\u00A0</string>
     <string name="title_2">\u00A0Añade diálogos y comparte tus pensamientos\u00A0</string>
@@ -12,9 +12,9 @@
     <string name="pony_maker">Creador de avatares</string>
 
     <string name="permission">Permiso</string>
-    <string name="storage">Almacenamiento</string>
+    <string name="storage">Almacenamiento\u00A0</string>
     <string name="continue_per">Continuar</string>
-    <string name="notification">Notificación</string>
+    <string name="notification">Notificación\u00A0</string>
     <string name="granted_notification">Permiso de notificaciones concedido</string>
     <string name="granted_storage">Permiso de almacenamiento concedido</string>
     <string name="allow">\u00A0Permitir</string>
