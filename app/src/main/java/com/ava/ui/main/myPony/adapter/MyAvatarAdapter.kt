@@ -25,11 +25,13 @@ class MyAvatarAdapter(val context: Context) :
             loadImage(root, item.path, imvImage)
 
             if (item.isShowSelection) {
+                showDownSelect.visible()
                 btnSelect.visible()
                 btnEdit.gone()
                 btnDelete.gone()
             } else {
                 btnSelect.gone()
+                showDownSelect.gone()
                 btnEdit.visible()
                 btnDelete.visible()
             }

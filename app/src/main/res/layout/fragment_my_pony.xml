@@ -3,15 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="@drawable/img_bg_lang"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.ava.ui.main.myPony.MyPonyFragment">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/img_bg_lang" />
     <!-- layoutActionBar -->
     <FrameLayout
         android:id="@+id/layoutActionBar"
@@ -29,31 +25,41 @@
         android:id="@+id/cvType"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimension_0"
-        app:layout_constraintDimensionRatio="3.28:0.4"
-        android:layout_marginHorizontal="@dimen/dimension_16"
-        android:layout_marginTop="@dimen/dimension_16"
+        app:layout_constraintDimensionRatio="3.24:0.44"
+        android:layout_marginHorizontal="@dimen/dimension_18"
+        android:layout_marginTop="@dimen/dimension_13"
         app:layout_constraintTop_toBottomOf="@id/layoutActionBar">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:weightSum="328">
+            android:weightSum="324">
 
             <!--            btnMyAvatar-->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/btnMyAvatar"
                 android:layout_width="@dimen/dimension_0"
                 android:layout_height="match_parent"
-                android:layout_weight="96">
+                android:layout_weight="154">
 
 
                 <ImageView
                     android:id="@+id/imgMyponyFor"
                     android:layout_width="match_parent"
+                    android:layout_marginBottom="@dimen/dimension_1"
+                    android:layout_marginHorizontal="0.5dp"
                     android:layout_height="match_parent"
                     android:scaleType="fitXY"
+                    android:elevation="@dimen/dimension_2"
                     android:src="@drawable/bg_btn_type_selected" />
+                <!--                imvFocusMyAvatar-->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:elevation="@dimen/dimension_1"
+                    android:src="@drawable/bg_btn_shadown_mycreaion" />
                 <!--                imvFocusMyAvatar-->
 
 
@@ -63,6 +69,7 @@
                     style="@style/single_marquee"
                     android:layout_width="@dimen/dimension_0"
                     android:layout_height="@dimen/dimension_0"
+                    android:elevation="@dimen/dimension_3"
                     app:layout_constraintStart_toStartOf="@+id/imgMyponyFor"
                     app:layout_constraintEnd_toEndOf="@+id/imgMyponyFor"
                     app:layout_constraintTop_toTopOf="@+id/imgMyponyFor"
@@ -71,7 +78,7 @@
                     android:fontFamily="@font/londrina_solid_regular"
                     android:gravity="center"
                     android:text="@string/my_avatar"
-                    android:textColor="@color/white3"
+                    android:textColor="@color/app_color"
                     app:outerStrokeColor="@color/app_color"
                     app:outerStrokeWidth="@dimen/dimension_1_3"
                     android:textSize="@dimen/text_size_16" />
@@ -81,14 +88,14 @@
             <Space
                 android:layout_width="@dimen/dimension_0"
                 android:layout_height="match_parent"
-                android:layout_weight="8" />
+                android:layout_weight="16" />
 
             <!--            btnMyDesign-->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/btnMyDesign"
                 android:layout_width="@dimen/dimension_0"
                 android:layout_height="match_parent"
-                android:layout_weight="96">
+                android:layout_weight="154">
 
 
 
@@ -97,12 +104,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="fitXY"
+                    android:layout_marginBottom="@dimen/dimension_1"
+                    android:layout_marginHorizontal="0.5dp"
+                    android:elevation="@dimen/dimension_2"
                     android:src="@drawable/bg_btn_type_unselected" />
-
+                <!--                imvFocusMyAvatar-->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:elevation="@dimen/dimension_1"
+                    android:src="@drawable/bg_btn_shadown_mycreaion" />
                 <!--                tvMyDesign-->
                 <TextView
                     android:id="@+id/tvMyDesign"
                     style="@style/single_marquee"
+                    android:elevation="@dimen/dimension_3"
                     android:fontFamily="@font/londrina_solid_regular"
                     android:layout_width="@dimen/dimension_0"
                     android:layout_height="@dimen/dimension_0"
@@ -112,7 +129,7 @@
                     app:layout_constraintBottom_toBottomOf="@+id/imgMyponyFor2"
                     android:gravity="center"
                     android:text="@string/design"
-                    android:textColor="@color/white3"
+                    android:textColor="@color/app_color2"
                     app:outerStrokeColor="@color/app_color"
                     app:outerStrokeWidth="@dimen/dimension_1_3"
                     android:textSize="@dimen/text_size_16" />
@@ -126,7 +143,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/mater"
-        android:background="@color/app_color13"
+        android:background="@color/transparent"
         android:paddingHorizontal="@dimen/dimension_8"
         android:elevation="@dimen/dimension_2"
         app:cardBackgroundColor="@color/app_color"
@@ -160,10 +177,8 @@
             android:id="@+id/recycleAvatar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/dimension_8"
-            android:layout_marginHorizontal="@dimen/dimension_4"
-
-
+            android:layout_marginTop="@dimen/dimension_24"
+            android:layout_marginHorizontal="@dimen/dimension_0"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
 
             app:spanCount="2"
@@ -174,8 +189,8 @@
             android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/dimension_8"
-            android:layout_marginHorizontal="@dimen/dimension_4"
+            android:layout_marginTop="@dimen/dimension_24"
+            android:layout_marginHorizontal="@dimen/dimension_0"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:spanCount="2"
             tools:itemCount="9"
@@ -199,7 +214,7 @@
                 android:layout_marginBottom="@dimen/dimension_16"
                 android:orientation="horizontal"
                 android:weightSum="296"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/llBottom"
                 app:layout_constraintDimensionRatio="2.96:0.4">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -280,6 +295,89 @@
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
+            <LinearLayout
+                android:id="@+id/llBottom"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimension_0"
+                android:orientation="horizontal"
+                android:weightSum="288"
+                android:layout_marginBottom="@dimen/dimension_20"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="2.88:0.48">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/btnShare"
+                    android:layout_width="@dimen/dimension_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="140">
+
+
+                    <ImageView
+                        android:id="@+id/imgMyponyFor3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/bg_btn_mycreation" />
+                    <TextView
+                        android:id="@+id/tvShare"
+                        style="@style/single_marquee"
+                        android:layout_width="@dimen/dimension_0"
+                        android:layout_height="@dimen/dimension_0"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="@dimen/dimension_4"
+                        android:fontFamily="@font/carter_one_regular"
+                        android:gravity="center"
+                        android:text="@string/share"
+                        app:layout_constraintStart_toStartOf="@+id/imgMyponyFor3"
+                        app:layout_constraintEnd_toEndOf="@+id/imgMyponyFor3"
+                        app:layout_constraintTop_toTopOf="@+id/imgMyponyFor3"
+                        app:layout_constraintBottom_toBottomOf="@+id/imgMyponyFor3"
+                        android:textColor="@color/white"
+                        app:outerStrokeColor="@color/app_color"
+                        app:outerStrokeWidth="@dimen/dimension_3_5"
+                        android:textSize="@dimen/text_size_18" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <Space
+                    android:layout_width="@dimen/dimension_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/btnDownload"
+                    android:layout_width="@dimen/dimension_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="140">
+
+
+                    <ImageView
+                        android:id="@+id/imgMyponyFor4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/bg_btn_mycreation" />
+                    <TextView
+                        android:id="@+id/tvDownload"
+                        style="@style/single_marquee"
+                        android:layout_width="@dimen/dimension_0"
+                        android:layout_height="@dimen/dimension_0"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="@dimen/dimension_4"
+                        android:fontFamily="@font/carter_one_regular"
+                        android:gravity="center"
+                        android:text="@string/download"
+                        android:textColor="@color/white"
+                        app:outerStrokeColor="@color/app_color"
+                        app:outerStrokeWidth="@dimen/dimension_3_5"
+                        android:textSize="@dimen/text_size_18"
+                        app:layout_constraintStart_toStartOf="@+id/imgMyponyFor4"
+                        app:layout_constraintEnd_toEndOf="@+id/imgMyponyFor4"
+                        app:layout_constraintTop_toTopOf="@+id/imgMyponyFor4"
+                        app:layout_constraintBottom_toBottomOf="@+id/imgMyponyFor4"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

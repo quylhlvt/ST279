@@ -21,9 +21,11 @@ class MyDesignAdapter() : BaseAdapter<MyAlbumModel, ItemMyDesignBinding>(ItemMyD
             loadImage(root, item.path, imvImage)
 
             if (item.isShowSelection) {
+                showDownSelect.visible()
                 btnSelect.visible()
                 btnDelete.gone()
             } else {
+                showDownSelect.gone()
                 btnSelect.gone()
                 btnDelete.visible()
             }

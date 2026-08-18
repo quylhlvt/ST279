@@ -11,6 +11,7 @@ import android.view.MotionEvent
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
@@ -128,7 +129,8 @@ class MyPonyFragment : WhatsappSharingFragment<FragmentMyPonyBinding, MyPonyView
             if (isAvatar) {
                 imgMyponyFor2.setImageResource(R.drawable.bg_btn_type_unselected)
                 imgMyponyFor.setImageResource(R.drawable.bg_btn_type_selected)
-
+                tvMyAvatar.setTextColor(ContextCompat.getColor(requireContext(), R.color.app_color))
+                tvMyDesign.setTextColor(ContextCompat.getColor(requireContext(), R.color.app_color2))
                 recycleAvatar.visible()
                 recycleDesign.gone()
                 updateEmptyState(myAvatarAdapter.items.isEmpty())
@@ -136,7 +138,8 @@ class MyPonyFragment : WhatsappSharingFragment<FragmentMyPonyBinding, MyPonyView
             } else {
                 imgMyponyFor2.setImageResource(R.drawable.bg_btn_type_selected)
                 imgMyponyFor.setImageResource(R.drawable.bg_btn_type_unselected)
-
+                tvMyDesign.setTextColor(ContextCompat.getColor(requireContext(), R.color.app_color))
+                tvMyAvatar.setTextColor(ContextCompat.getColor(requireContext(), R.color.app_color2))
                 recycleAvatar.gone()
                 recycleDesign.visible()
                 updateEmptyState(myDesignAdapter.items.isEmpty())
@@ -333,6 +336,7 @@ class MyPonyFragment : WhatsappSharingFragment<FragmentMyPonyBinding, MyPonyView
                 if (hasSelection) {
                     // ✅ Long click: hiện cả 4 nút
                     lnlBottomTop.visible()  // WhatsApp + Telegram
+                    llBottom.visible()      // Share + Download
                     actionBar.apply {
                         btnActionBarCenter.visible()
                         btnActionBarNextToRight.visible()
@@ -342,6 +346,7 @@ class MyPonyFragment : WhatsappSharingFragment<FragmentMyPonyBinding, MyPonyView
                 } else {
                     // ✅ Bình thường có item: chỉ WhatsApp + Telegram
                     lnlBottomTop.visible()
+                    llBottom.gone()
                     actionBar.apply {
                         btnActionBarCenter.invisible()
                         btnActionBarNextToRight.invisible()
@@ -360,9 +365,11 @@ class MyPonyFragment : WhatsappSharingFragment<FragmentMyPonyBinding, MyPonyView
                         btnActionBarRight.visible()
                     }
                     lnlBottomTop.gone()
+                    llBottom.visible()
                 } else {
                     // ✅ Bình thường hoặc không có item: ẩn hết
                     lnlBottom.gone()
+                    llBottom.gone()
                     actionBar.apply {
                         btnActionBarCenter.invisible()
                         btnActionBarNextToRight.invisible()
@@ -406,10 +413,10 @@ class MyPonyFragment : WhatsappSharingFragment<FragmentMyPonyBinding, MyPonyView
         }
         if (isAvatar) {
             myAvatarAdapter.submitList(updatedList)
-            setRecyclerBottomMargin(binding.recycleAvatar, 0) // ← thêm margin
+            setRecyclerBottomMargin(binding.recycleAvatar, 100)
         } else {
             myDesignAdapter.submitList(updatedList)
-            setRecyclerBottomMargin(binding.recycleDesign, 0) // ← thêm margin
+            setRecyclerBottomMargin(binding.recycleDesign, 50)
         }
         updateSelectionUI()
     }
