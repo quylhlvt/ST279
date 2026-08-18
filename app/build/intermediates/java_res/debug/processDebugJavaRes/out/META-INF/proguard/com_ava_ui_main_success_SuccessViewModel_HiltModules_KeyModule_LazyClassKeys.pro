@@ -1,0 +1,1 @@
+-keep,allowobfuscation,allowshrinking class com.ava.ui.main.success.SuccessViewModel

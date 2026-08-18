@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_bg_lang"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.ava.ui.main.random.RandomFragment">
+
+
+    <FrameLayout
+        android:id="@+id/layoutActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/actionBar"
+            layout="@layout/layout_actionbar" />
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="@dimen/dimension_0"
+        android:layout_height="@dimen/dimension_0"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toBottomOf="@+id/layoutActionBar"
+        app:layout_constraintBottom_toBottomOf="@+id/guidelineBottom1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/white"
+        android:id="@+id/mater3"
+        android:elevation="@dimen/dimension_2"
+      >
+        <ImageView
+            android:id="@+id/imvImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+
+            android:src="@drawable/img_permission" />
+        <ImageView
+            android:id="@+id/imageGif"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/progressLoading"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottom1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.595" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimension_0"
+        app:layout_constraintDimensionRatio="3.6:0.24"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineBottom1" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="@dimen/dimension_0"
+        android:layout_height="@dimen/dimension_0"
+        app:layout_constraintDimensionRatio="0.16:3.24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineBottom1" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="@dimen/dimension_0"
+        android:layout_height="@dimen/dimension_0"
+        app:layout_constraintDimensionRatio="0.16:3.24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineBottom1" />
+<View
+        android:id="@+id/view4"
+        android:layout_width="@dimen/dimension_0"
+        android:layout_height="@dimen/dimension_0"
+        app:layout_constraintDimensionRatio="0.32:3.24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineBottom1" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="@dimen/dimension_0"
+        android:layout_height="@dimen/dimension_0"
+        app:layout_constraintDimensionRatio="0.32:3.24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineBottom1" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimension_0"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_view_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineBottom1" />
+    <TextView
+        android:id="@+id/txtTittleRandom"
+        android:layout_width="@dimen/dimension_0"
+        android:layout_height="@dimen/dimension_0"
+        app:layout_constraintDimensionRatio="3.28:0.56"
+        android:textSize="@dimen/text_size_16"
+        android:fontFamily="@font/londrina_solid_regular"
+        android:textColor="@color/app_color"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/dimension_50"
+        android:text="@string/click_the_random_button_below_to_see_what_your_character_is"
+        android:background="@drawable/bg_random_title"
+        app:layout_constraintStart_toEndOf="@+id/view2"
+        app:layout_constraintEnd_toStartOf="@+id/view3"
+        app:layout_constraintTop_toBottomOf="@+id/view1"/>
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_width="@dimen/dimension_0"
+        android:layout_height="@dimen/dimension_0"
+        app:layout_constraintStart_toEndOf="@+id/view4"
+        app:layout_constraintEnd_toStartOf="@+id/view5"
+        android:orientation="horizontal"
+        android:weightSum="296"
+        android:layout_marginTop="@dimen/dimension_16"
+        app:layout_constraintTop_toBottomOf="@+id/txtTittleRandom"
+        app:layout_constraintDimensionRatio="2.96:0.4">
+
+        <FrameLayout
+            android:id="@+id/random"
+            android:layout_width="@dimen/dimension_0"
+            android:layout_height="match_parent"
+            android:layout_weight="144"
+            android:background="@drawable/bg_frame_random">
+
+            <TextView
+                android:id="@+id/txtShow"
+                style="@style/single_marquee"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/dimension_10"
+                android:fontFamily="@font/londrina_solid_regular"
+                android:gravity="center"
+                android:text="@string/random"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_20" />
+        </FrameLayout>
+
+        <Space
+            android:layout_width="@dimen/dimension_0"
+            android:layout_height="match_parent"
+            android:layout_weight="8" />
+
+        <FrameLayout
+            android:id="@+id/btnEdit"
+            android:layout_width="@dimen/dimension_0"
+            android:layout_height="match_parent"
+            android:layout_weight="144"
+            android:background="@drawable/bg_frame_random_edit">
+
+            <TextView
+                android:id="@+id/tvEdit"
+                style="@style/single_marquee"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/dimension_10"
+                android:fontFamily="@font/londrina_solid_regular"
+                android:gravity="center"
+                android:text="@string/edit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_20" />
+        </FrameLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

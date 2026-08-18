@@ -1,0 +1,1186 @@
+[
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_rate_five.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_rate_five.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/navigation_nav_graph.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/navigation/nav_graph.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_item_home.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_item_home.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_lang_set.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_lang_set.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_ic_select_lang.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/ic_select_lang.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/anim_slide_out_right.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/anim/slide_out_right.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_ic_flag_indo.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/ic_flag_indo.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_rated.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_rated.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_frame_selected_language.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/frame_selected_language.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_16_solid_white_stroke_brown.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_16_solid_white_stroke_brown.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_ic_flag_hindi.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/ic_flag_hindi.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_countdown.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_countdown.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_fb.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_fb.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_frame_unselect_language.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/frame_unselect_language.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_bg_countdown.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/bg_countdown.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_not_select.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_not_select.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_share_mycreation.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_share_mycreation.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_item_font.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/item_font.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_none.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_none.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_rotation.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_rotation.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/mipmap-mdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_img_title_home.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/img_title_home.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_item_text_color.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/item_text_color.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_show_big.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_show_big.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/raw_json_loading.json.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/raw/json_loading.json"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/font_mystery_quest_regular.ttf.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/font/mystery_quest_regular.ttf"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_item_sticker.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/item_sticker.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_policy_set.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_policy_set.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_text.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_text.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_100_stroke_appcolor.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_100_stroke_appcolor.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/xml_provider.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/xml/provider.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_custom_scale_layer.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_custom_scale_layer.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_img_end_color.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/img_end_color.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_transition_left.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/transition_left.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_img_intro2.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/img_intro2.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_img_lost_avatar.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/img_lost_avatar.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_frame_random_edit.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_frame_random_edit.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_launcher_background.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_scale_plus.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/scale_plus.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_img_title_splash.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/img_title_splash.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_layout_actionbar2.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/layout_actionbar2.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_blur.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_blur.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_progress_match.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_progress_match.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_rate_success.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_rate_success.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_select_lang.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_select_lang.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_rate_not.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_rate_not.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_img_home.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/img_home.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/anim_fade_in.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/anim/fade_in.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_img_bg_lang.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/img_bg_lang.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_home.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_home.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_rate_four.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_rate_four.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_mycreation.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_mycreation.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_frame_select_add_unforcus.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/frame_select_add_unforcus.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_img_intro1.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/img_intro1.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_frame_random.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_frame_random.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_flip_all_custom.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_flip_all_custom.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_fragment_success.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/fragment_success.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_item_my_design.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/item_my_design.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_flag_hindi.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_flag_hindi.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_rate_two.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_rate_two.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_ic_add_color_item.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/ic_add_color_item.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_img_permission.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/img_permission.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_sticker.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_sticker.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_btn_try_again.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/btn_try_again.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_img_view_bottom.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/img_view_bottom.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_flag_spanish.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_flag_spanish.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_img_view_bottom.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/img_view_bottom.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_ic_flag_french.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/ic_flag_french.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_fragment_intro.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/fragment_intro.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_flag_indo.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_flag_indo.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_logoapp.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/logoapp.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_ig.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_ig.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_activity_main.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_rate_rero.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_rate_rero.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_reset_all_custom.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_reset_all_custom.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_btn_dialog_base.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/btn_dialog_base.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_item_layer.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/item_layer.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_share_set.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_share_set.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_frame_random_unedit.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_frame_random_unedit.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_frame_setting.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/frame_setting.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_switch_off.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/switch_off.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_fragment_permission.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/fragment_permission.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_ic_flag_germani.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/ic_flag_germani.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_dialog_create_name.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/dialog_create_name.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_ic_flag_spanish.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/ic_flag_spanish.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_item_my_avatar.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/item_my_avatar.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/font_atma_bold.ttf.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/font/atma_bold.ttf"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_delete_all.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_delete_all.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/font_damion_regular.ttf.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/font/damion_regular.ttf"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_btn_type_selected.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_btn_type_selected.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_close_guide.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_close_guide.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_layout_actionbar.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/layout_actionbar.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_speech_selected.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_speech_selected.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_progress_track_start.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_progress_track_start.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_layout_background_tab.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/layout_background_tab.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/xml_backup_rules.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_background_selected.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_background_selected.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/font_baloo2_bold.ttf.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/font/baloo2_bold.ttf"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_frame_selected_language.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/frame_selected_language.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_settings.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_settings.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_progress_track_bottom.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_progress_track_bottom.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_fragment_cosplay.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/fragment_cosplay.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_fragment_view.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/fragment_view.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_not_select_all.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_not_select_all.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_progress_track_success.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_progress_track_success.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_btn_win.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/btn_win.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/raw_lottie_splash.json.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/raw/lottie_splash.json"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_rate_three.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_rate_three.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_dialogbase.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/dialogbase.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_img_home1.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/img_home1.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_flag_french.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_flag_french.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_dice.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_dice.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_scale_minus.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/scale_minus.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_sticker_selected.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_sticker_selected.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ratio_right.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ratio_right.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_download_mycreation.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_download_mycreation.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/font_carter_one_regular.ttf.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/font/carter_one_regular.ttf"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_random_title.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_random_title.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_img_intro3.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/img_intro3.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_background.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_background.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_btn_chossecolor.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/btn_chossecolor.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_btn_reset_scale.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/btn_reset_scale.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_ic_delete.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/ic_delete.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/navigation_nav_onboarding.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/navigation/nav_onboarding.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/font_lilita_one_regular.ttf.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/font/lilita_one_regular.ttf"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_dialog_color_picker.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/dialog_color_picker.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_bottom_bottom_view.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/bottom_bottom_view.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_add_color_item.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_add_color_item.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_unselected_add.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_unselected_add.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_switch_on.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/switch_on.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/xml_data_extraction_rules.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/anim_slide_in_right.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/anim/slide_in_right.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_txt_cosplay.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_txt_cosplay.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_transition_top.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/transition_top.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_dialog_rate.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/dialog_rate.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_img_bg_addcharecter_layer.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/img_bg_addcharecter_layer.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_img_home3.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/img_home3.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_ic_add_item.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/ic_add_item.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/font_londrina_solid_regular.ttf.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/font/londrina_solid_regular.ttf"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_speech.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_speech.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_flag_english.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_flag_english.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/font_inter_regular.ttf.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/font/inter_regular.ttf"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_select_all.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_select_all.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_fragment_my_pony.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/fragment_my_pony.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_fragment_choose_pony.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/fragment_choose_pony.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_none_item.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_none_item.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_fragment_add_character.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/fragment_add_character.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_fragment_setting.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/fragment_setting.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_circle_color.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/circle_color.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_img_bg_addcharecter_layer.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/img_bg_addcharecter_layer.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_fragment_home.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_flag_portugeese.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_flag_portugeese.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_no_item.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_no_item.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_recycle_item_home.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_recycle_item_home.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_item_choose.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/item_choose.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_btn_random.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_btn_random.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_img_intro2.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/img_intro2.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/font_croissant_one_regular.ttf.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/font/croissant_one_regular.ttf"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_clock.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/clock.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_8_title_unselect.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_8_title_unselect.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_add_item.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_add_item.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_bg_bottom_intro.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/bg_bottom_intro.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_8_solid_white.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_8_solid_white.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_flip_add.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_flip_add.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_item_language.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/item_language.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_img_intro3.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/img_intro3.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_frame_select_add.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/frame_select_add.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_8_color_name.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_8_color_name.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_item_tittle_background_image.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/item_tittle_background_image.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_progress_match_success.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_progress_match_success.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_ic_fb.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/ic_fb.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_selected.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_selected.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_layout_text_panel.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/layout_text_panel.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_fragment_language.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/fragment_language.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/font_roboto_regular.ttf.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/font/roboto_regular.ttf"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_ic_flag_portugeese.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/ic_flag_portugeese.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_rate_one.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_rate_one.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_fragment_show.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/fragment_show.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/anim_slide_in_left.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/anim/slide_in_left.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_add_color.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_add_color.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_btn_whatsapp.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_btn_whatsapp.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/font_roboto_medium.ttf.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/font/roboto_medium.ttf"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_img_win_avatar.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/img_win_avatar.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_ic_un_select_lang.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/ic_un_select_lang.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_item_color.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/item_color.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_select_language.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/select_language.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_save_background.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/save_background.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_fragment_random.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/fragment_random.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_btn_mycreation.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_btn_mycreation.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_close.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_close.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_item_home_menu.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/item_home_menu.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_gif.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/gif.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_edit_view.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_edit_view.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_btn_telegram.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_btn_telegram.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_flag_germani.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_flag_germani.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/font_cherry_bomb_one_regular.ttf.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/font/cherry_bomb_one_regular.ttf"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/font_kranky_regular.ttf.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/font/kranky_regular.ttf"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/mipmap-xhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_frame_permission.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_frame_permission.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/font_baloo2_extrabold.ttf.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/font/baloo2_extrabold.ttf"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_foreground_color_item.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/foreground_color_item.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_delete.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_delete.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_star_success.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_star_success.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/navigation_nav_main.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/navigation/nav_main.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/font_js_math_cmmi.ttf.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/font/js_math_cmmi.ttf"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/navigation_nav_setting.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/navigation/nav_setting.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_ic_none_item.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/ic_none_item.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_img_bg_ig.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/img_bg_ig.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_fragment_splash.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/fragment_splash.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_dialog_speech.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/dialog_speech.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/anim_fade_out.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/anim/fade_out.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_selected_add.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_selected_add.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_frame_select_success.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/frame_select_success.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_btn_cosplay.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_btn_cosplay.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_8_color.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_8_color.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_foreground_img_bg.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/foreground_img_bg.webp"
+    },
+    {
+        "merged": "com.ava.app-debug-101:/layout_fragment_home.xml.flat",
+        "source": "com.ava.app-main-103:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_image_splash.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/image_splash.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_un_select_lang.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_un_select_lang.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_transition_bottom.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/transition_bottom.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_ic_ig.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/ic_ig.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_progress_track.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_progress_track.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_bg_custom_scale_layer.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/bg_custom_scale_layer.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_layout_actionbar3.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/layout_actionbar3.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_8_title.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_8_title.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/font_itim_regular.ttf.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/font/itim_regular.ttf"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_unrate_success.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_unrate_success.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/font_cutive_mono_regular.ttf.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/font/cutive_mono_regular.ttf"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_btn_type_unselected.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_btn_type_unselected.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_back_app1.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/back_app1.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_img_vs.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/img_vs.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_buttom_font_speech.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_buttom_font_speech.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_item_background_color.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/item_background_color.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_bg_btn_cosplay.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/bg_btn_cosplay.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_ic_edit.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/ic_edit.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/xml_network_security_config.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/xml/network_security_config.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_edit.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_edit.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_img_bg_mycreation.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/img_bg_mycreation.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_transition_right.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/transition_right.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_guid.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/guid.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_img_bg_fb.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/img_bg_fb.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_pin.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/pin.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_item_background_image.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/item_background_image.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_item_bottom_custom.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/item_bottom_custom.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/anim_slide_out_left.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/anim/slide_out_left.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_frame_unselect_language.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/frame_unselect_language.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_done_text.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_done_text.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_100_stroke_red.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_100_stroke_red.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_content_intro.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_content_intro.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_item_quick_mix.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/item_quick_mix.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ratio_left.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ratio_left.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_star.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_star.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_frame_setting.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/frame_setting.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_rate.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_rate.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_back_app.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/back_app.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/font_pacifico_regular.ttf.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/font/pacifico_regular.ttf"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_bg_btn_random.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/bg_btn_random.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_fragment_success_cosplay.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/fragment_success_cosplay.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/font_italianno_regular.ttf.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/font/italianno_regular.ttf"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_img_bg_ig.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/img_bg_ig.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_img_bg_fb.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/img_bg_fb.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/font_dynalight_regular.ttf.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/font/dynalight_regular.ttf"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_rate_set.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_rate_set.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_shadown_item_lang.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_shadown_item_lang.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_ic_flag_english.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/ic_flag_english.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_fragment_customize.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/fragment_customize.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/mipmap-hdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_frame_select_add.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/frame_select_add.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_scale_cus_none.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_scale_cus_none.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/mipmap-xxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_item_intro.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/item_intro.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/font_bubblegum_sans_regular.ttf.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/font/bubblegum_sans_regular.ttf"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_img_home4.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/img_home4.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_ic_text_selected.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/ic_text_selected.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_foreground_color_item_white.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/foreground_color_item_white.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_10_stroke_linear_color.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_10_stroke_linear_color.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_bottom_intro.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_bottom_intro.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_bg_progress_fill.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/bg_progress_fill.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_item_speech.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/item_speech.xml"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable_frame_select_success.webp.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable/frame_select_success.webp"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/drawable-sw600dp_img_intro1.png.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/drawable-sw600dp/img_intro1.png"
+    },
+    {
+        "merged": "/home/lequy/.gradle/daemon/8.13/com.ava.app-debug-101:/layout_layout_speech_tab.xml.flat",
+        "source": "/home/lequy/.gradle/daemon/8.13/com.ava.app-main-103:/layout/layout_speech_tab.xml"
+    }
+]

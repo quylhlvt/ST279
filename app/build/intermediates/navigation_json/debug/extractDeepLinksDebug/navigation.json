@@ -1,0 +1,26 @@
+[
+  {
+    "name": "nav_setting",
+    "navigationXmlIds": [],
+    "deepLinks": []
+  },
+  {
+    "name": "nav_onboarding",
+    "navigationXmlIds": [],
+    "deepLinks": []
+  },
+  {
+    "name": "nav_main",
+    "navigationXmlIds": [],
+    "deepLinks": []
+  },
+  {
+    "name": "nav_graph",
+    "navigationXmlIds": [
+      "nav_onboarding",
+      "nav_main",
+      "nav_setting"
+    ],
+    "deepLinks": []
+  }
+]
