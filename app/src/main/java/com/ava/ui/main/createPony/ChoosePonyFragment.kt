@@ -21,6 +21,7 @@ import com.ava.ui.main.customize.CustomizeFragment
 import com.ava.R
 import com.ava.core.extention.InternetExtension.isInternetAvailable
 import com.ava.core.extention.InternetExtension.isNetworkConnected
+import com.ava.core.extention.setTextActionBar
 import com.ava.databinding.FragmentChoosePonyBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
@@ -55,7 +56,7 @@ class ChoosePonyFragment : BaseFragment<FragmentChoosePonyBinding, ChoosePonyVie
 
 
         setImageActionBar(binding.actionBar.btnActionBarLeft, R.drawable.back_app)
-
+        setTextActionBar(binding.actionBar.tvCenter, getString(R.string.category))
 
         adapter = ChoosePonyAdapter { character, position ->
             val number = character.id.filter { it.isDigit() }

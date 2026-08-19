@@ -122,7 +122,7 @@ class CustomizeFragment : BaseFragment<FragmentCustomizeBinding, CustomizeViewMo
         binding.actionBar.apply {
             setImageActionBar(btnActionBarLeft, R.drawable.back_app)
             setImageActionBar(btnActionBarCenter1, R.drawable.ic_reset_all_custom)
-//            setImageActionBar(btnActionBarCenter, R.drawable.ic_flip_all_custom)
+            setImageActionBar(btnActionBarCenter, R.drawable.ic_flip_all_custom)
             setMaterialCardViewActionBar1(
                 btnActionBarRightText,
                 tvRightText,

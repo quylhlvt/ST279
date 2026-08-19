@@ -17,7 +17,7 @@
 
         <include
             android:id="@+id/actionBar"
-            layout="@layout/layout_actionbar3" />
+            layout="@layout/layout_actionbar" />
     </FrameLayout>
 
     <!--    cvType-->
@@ -75,13 +75,14 @@
                     app:layout_constraintTop_toTopOf="@+id/imgMyponyFor"
                     app:layout_constraintBottom_toBottomOf="@+id/imgMyponyFor"
                     android:layout_marginVertical="@dimen/dimension_1"
-                    android:fontFamily="@font/londrina_solid_regular"
+                    android:paddingBottom="@dimen/dimension_5"
+                    android:fontFamily="@font/pacifico_regular"
                     android:gravity="center"
                     android:text="@string/my_avatar"
                     android:textColor="@color/app_color"
                     app:outerStrokeColor="@color/app_color"
                     app:outerStrokeWidth="@dimen/dimension_1_3"
-                    android:textSize="@dimen/text_size_16" />
+                    android:textSize="@dimen/text_size_20" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -120,7 +121,8 @@
                     android:id="@+id/tvMyDesign"
                     style="@style/single_marquee"
                     android:elevation="@dimen/dimension_3"
-                    android:fontFamily="@font/londrina_solid_regular"
+                    android:paddingBottom="@dimen/dimension_5"
+                    android:fontFamily="@font/pacifico_regular"
                     android:layout_width="@dimen/dimension_0"
                     android:layout_height="@dimen/dimension_0"
                     app:layout_constraintStart_toStartOf="@+id/imgMyponyFor2"
@@ -132,7 +134,7 @@
                     android:textColor="@color/app_color2"
                     app:outerStrokeColor="@color/app_color"
                     app:outerStrokeWidth="@dimen/dimension_1_3"
-                    android:textSize="@dimen/text_size_16" />
+                    android:textSize="@dimen/text_size_20" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -206,63 +208,48 @@
             android:layout_gravity="bottom"
             app:layout_constraintBottom_toBottomOf="parent">
 
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/lnlBottomTopShadown"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimension_0"
+                android:layout_marginBottom="@dimen/dimension_16"
+                android:orientation="horizontal"
+                android:weightSum="324"
+                app:layout_constraintBottom_toTopOf="@+id/llBottom"
+                app:layout_constraintDimensionRatio="3.24:0.44">
+                <View
+
+                    android:layout_width="@dimen/dimension_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="154"
+                    android:background="@drawable/bg_btn_whatsapp_shadown"/>
+                <Space
+                    android:layout_width="@dimen/dimension_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="16" />
+                <View
+                    android:layout_width="@dimen/dimension_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="154"
+                    android:background="@drawable/bg_btn_whatsapp_shadown"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
             <!--        lnlBottomTop-->
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/lnlBottomTop"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dimension_0"
-                android:layout_marginBottom="@dimen/dimension_16"
+                android:layout_marginBottom="@dimen/dimension_17"
                 android:orientation="horizontal"
-                android:weightSum="296"
+                android:weightSum="324"
                 app:layout_constraintBottom_toTopOf="@+id/llBottom"
-                app:layout_constraintDimensionRatio="2.96:0.4">
+                app:layout_constraintDimensionRatio="3.24:0.44">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/btnTelegram"
-
-                    android:layout_width="@dimen/dimension_0"
-                    android:layout_height="match_parent"
-                    android:layout_weight="144"
-                    android:background="@drawable/bg_btn_telegram">
-                    <View
-                        android:id="@+id/view1"
-                        app:layout_constraintStart_toStartOf="parent"
-                        android:layout_width="@dimen/dimension_0"
-                        android:layout_height="match_parent"
-                        app:layout_constraintDimensionRatio="0.8:4.4"/>
-                   <View
-                        android:id="@+id/view2"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:layout_width="@dimen/dimension_0"
-                        android:layout_height="match_parent"
-                        app:layout_constraintDimensionRatio="0.8:4.4"/>
-
-                    <TextView
-                        android:id="@+id/tvTelegram"
-                        style="@style/single_marquee"
-                        android:layout_width="@dimen/dimension_0"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:layout_marginHorizontal="@dimen/dimension_4"
-                        android:fontFamily="@font/lilita_one_regular"
-                        android:gravity="center"
-                        android:text="@string/add_to_telegram"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/text_size_14"
-                        app:layout_constraintEnd_toStartOf="@+id/view2"
-                        app:layout_constraintStart_toEndOf="@+id/view1" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <Space
-                    android:layout_width="@dimen/dimension_0"
-                    android:layout_height="match_parent"
-                    android:layout_weight="8" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/btnWhatsapp"
                     android:layout_width="@dimen/dimension_0"
                     android:layout_height="match_parent"
-                    android:layout_weight="144"
+                    android:layout_weight="154"
                     android:background="@drawable/bg_btn_whatsapp">
                     <View
                         android:id="@+id/view3"
@@ -276,41 +263,121 @@
                         android:layout_width="@dimen/dimension_0"
                         android:layout_height="match_parent"
                         app:layout_constraintDimensionRatio="0.8:4.4"/>
-
+                    <ImageView
+                        android:id="@+id/icWhatApp"
+                        android:layout_width="@dimen/dimension_0"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="@dimen/dimension_14"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintStart_toEndOf="@+id/view3"
+                        android:src="@drawable/ic_whatsapp"/>
                     <TextView
                         android:id="@+id/tvWhatApp"
                         style="@style/single_marquee"
                         android:layout_width="@dimen/dimension_0"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_marginHorizontal="@dimen/dimension_4"
-                        android:fontFamily="@font/lilita_one_regular"
+                        android:layout_marginHorizontal="@dimen/dimension_2"
+                        android:fontFamily="@font/pacifico_regular"
                         android:gravity="center"
                         android:text="@string/add_to_whatsapp"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/text_size_14"
+                        android:paddingBottom="@dimen/dimension_5"
+                        android:textSize="@dimen/text_size_16"
                         app:layout_constraintEnd_toStartOf="@+id/view4"
-                        app:layout_constraintStart_toEndOf="@+id/view3" />
+                        app:layout_constraintStart_toEndOf="@+id/icWhatApp" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <Space
+                    android:layout_width="@dimen/dimension_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="16" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/btnTelegram"
+                    android:layout_width="@dimen/dimension_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="154"
+                    android:background="@drawable/bg_btn_telegram">
+                    <View
+                        android:id="@+id/view1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_width="@dimen/dimension_0"
+                        android:layout_height="match_parent"
+                        app:layout_constraintDimensionRatio="0.8:4.4"/>
+                    <View
+                        android:id="@+id/view2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_width="@dimen/dimension_0"
+                        android:layout_height="match_parent"
+                        app:layout_constraintDimensionRatio="0.8:4.4"/>
+                    <ImageView
+                        android:id="@+id/icTelegram"
+                        android:layout_width="@dimen/dimension_0"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="@dimen/dimension_14"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintStart_toEndOf="@+id/view1"
+                        android:src="@drawable/ic_telegram"/>
+                    <TextView
+                        android:id="@+id/tvTelegram"
+                        style="@style/single_marquee"
+                        android:layout_width="@dimen/dimension_0"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="@dimen/dimension_2"
+                        android:fontFamily="@font/pacifico_regular"
+                        android:gravity="center"
+                        android:text="@string/add_to_telegram"
+                        android:textColor="@color/white"
+                        android:paddingBottom="@dimen/dimension_5"
+                        android:textSize="@dimen/text_size_16"
+                        app:layout_constraintEnd_toStartOf="@+id/view2"
+                        app:layout_constraintStart_toEndOf="@+id/icTelegram" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </androidx.appcompat.widget.LinearLayoutCompat>
 
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <!--        lnlBottomTop-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llBottomShadown"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimension_0"
+                android:layout_marginBottom="@dimen/dimension_19"
+                android:orientation="horizontal"
+                android:weightSum="324"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="3.24:0.44">
+                <View
+
+                    android:layout_width="@dimen/dimension_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="154"
+                    android:background="@drawable/bg_btn_whatsapp_shadown"/>
+                <Space
+                    android:layout_width="@dimen/dimension_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="16" />
+                <View
+                    android:layout_width="@dimen/dimension_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="154"
+                    android:background="@drawable/bg_btn_whatsapp_shadown"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
             <LinearLayout
                 android:id="@+id/llBottom"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dimension_0"
                 android:orientation="horizontal"
-                android:weightSum="288"
+                android:weightSum="324"
                 android:layout_marginBottom="@dimen/dimension_20"
 
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintDimensionRatio="2.88:0.48">
+                app:layout_constraintDimensionRatio="3.24:0.44">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/btnShare"
                     android:layout_width="@dimen/dimension_0"
                     android:layout_height="match_parent"
-                    android:layout_weight="140">
+                    android:layout_weight="154">
 
 
                     <ImageView
@@ -326,29 +393,30 @@
                         android:layout_height="@dimen/dimension_0"
                         android:layout_gravity="center"
                         android:layout_marginHorizontal="@dimen/dimension_4"
-                        android:fontFamily="@font/carter_one_regular"
+                        android:paddingBottom="@dimen/dimension_5"
+                        android:fontFamily="@font/pacifico_regular"
                         android:gravity="center"
                         android:text="@string/share"
                         app:layout_constraintStart_toStartOf="@+id/imgMyponyFor3"
                         app:layout_constraintEnd_toEndOf="@+id/imgMyponyFor3"
                         app:layout_constraintTop_toTopOf="@+id/imgMyponyFor3"
                         app:layout_constraintBottom_toBottomOf="@+id/imgMyponyFor3"
-                        android:textColor="@color/white"
+                        android:textColor="@color/app_color"
                         app:outerStrokeColor="@color/app_color"
                         app:outerStrokeWidth="@dimen/dimension_3_5"
-                        android:textSize="@dimen/text_size_18" />
+                        android:textSize="@dimen/text_size_20" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <Space
                     android:layout_width="@dimen/dimension_0"
                     android:layout_height="match_parent"
-                    android:layout_weight="8" />
+                    android:layout_weight="16" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/btnDownload"
                     android:layout_width="@dimen/dimension_0"
                     android:layout_height="match_parent"
-                    android:layout_weight="140">
+                    android:layout_weight="154">
 
 
                     <ImageView
@@ -364,13 +432,14 @@
                         android:layout_height="@dimen/dimension_0"
                         android:layout_gravity="center"
                         android:layout_marginHorizontal="@dimen/dimension_4"
-                        android:fontFamily="@font/carter_one_regular"
+                        android:fontFamily="@font/pacifico_regular"
+                        android:paddingBottom="@dimen/dimension_5"
                         android:gravity="center"
                         android:text="@string/download"
-                        android:textColor="@color/white"
+                        android:textColor="@color/app_color"
                         app:outerStrokeColor="@color/app_color"
                         app:outerStrokeWidth="@dimen/dimension_3_5"
-                        android:textSize="@dimen/text_size_18"
+                        android:textSize="@dimen/text_size_20"
                         app:layout_constraintStart_toStartOf="@+id/imgMyponyFor4"
                         app:layout_constraintEnd_toEndOf="@+id/imgMyponyFor4"
                         app:layout_constraintTop_toTopOf="@+id/imgMyponyFor4"

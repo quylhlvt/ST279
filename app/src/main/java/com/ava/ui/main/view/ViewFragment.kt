@@ -2,8 +2,10 @@ package com.ava.ui.main.view
 
 import android.Manifest
 import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.view.WindowManager
@@ -29,9 +31,12 @@ import com.ava.ui.main.customize.CustomizeFragment
 import com.ava.ui.onboarding.permission.PermissionViewModel
 import com.ava.utils.share.SocialShareManager
 import com.ava.R
+import com.ava.core.extention.InternetExtension.isInternetAvailable
+import com.ava.core.extention.InternetExtension.isNetworkConnected
 import com.ava.databinding.FragmentViewBinding
 import dagger.hilt.android.AndroidEntryPoint
 import java.io.File
+import kotlin.compareTo
 
 @AndroidEntryPoint
 class ViewFragment : BaseFragment<FragmentViewBinding, ViewViewModel>(
@@ -87,14 +92,14 @@ class ViewFragment : BaseFragment<FragmentViewBinding, ViewViewModel>(
         binding.actionBar.btnActionBarNextToRight.isClickable = true
         binding.actionBar.btnActionBarRight.isEnabled = true
         binding.actionBar.btnActionBarRight.isClickable = true
-        binding.btnEdit.isEnabled = true
-        binding.btnEdit.isClickable = true
-//        binding.btnBottomRight.isEnabled = true
-//        binding.btnBottomRight.isClickable = true
-//        binding.btnBottomLeftSocial.isEnabled = true
-//        binding.btnBottomLeftSocial.isClickable = true
-//        binding.btnBottomRightSocial.isEnabled = true
-//        binding.btnBottomRightSocial.isClickable = true
+        binding.btnBottomLeft.isEnabled = true
+        binding.btnBottomLeft.isClickable = true
+        binding.btnBottomRight.isEnabled = true
+        binding.btnBottomRight.isClickable = true
+        binding.btnBottomLeftSocial.isEnabled = true
+        binding.btnBottomLeftSocial.isClickable = true
+        binding.btnBottomRightSocial.isEnabled = true
+        binding.btnBottomRightSocial.isClickable = true
         binding.root.requestLayout()
         binding.root.invalidate()
     }
@@ -102,31 +107,35 @@ class ViewFragment : BaseFragment<FragmentViewBinding, ViewViewModel>(
     private fun restoreWindowInteractions() {
         requireActivity().window.clearFlags(
             WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE or
-                WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
+                    WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
         )
         requireActivity().window.decorView.isEnabled = true
     }
 
     override fun initView() {
+
         currentImagePath = imagePath
         binding.apply {
-            actionBar.apply {
-                setImageActionBar(btnActionBarLeft, R.drawable.back_app)
-                setImageActionBar(actionBar.btnActionBarCenter, R.drawable.ic_delete_all)
-                setImageActionBar(actionBar.btnActionBarNextToRight, R.drawable.ic_share_mycreation)
-                setImageActionBar(actionBar.btnActionBarRight, R.drawable.ic_download_mycreation)
-            }
+            setImageActionBar(actionBar.btnActionBarLeft, R.drawable.back_app)
             loadImage(requireContext(), imagePath, imvImage)
-            txtEdit.isSelected = true
+            txtRight.isSelected = true
+            txtLeft.isSelected = true
+            txtLeftSocial.isSelected = true
+            txtRightSocial.isSelected = true
 
             when (imageType) {
-
                 1 -> {
-                    btnEdit.visible()
+                    txtLeft.text = getString(R.string.share)
+                    setImageActionBar(actionBar.btnActionBarRight, R.drawable.ic_delete)
+                    setImageActionBar(actionBar.btnActionBarNextToRight, R.drawable.ic_edit1)
+                    txtRight.apply { visible(); text = getString(R.string.download) }
+                    txtLeft.visible()
                 }
                 2 -> {
-
-                    btnEdit.gone()
+                    txtLeft.text = getString(R.string.share)
+                    setImageActionBar(actionBar.btnActionBarRight, R.drawable.ic_delete)
+                    txtRight.apply { visible(); text = getString(R.string.download) }
+                    txtLeft.visible()
                 }
             }
         }
@@ -138,22 +147,34 @@ class ViewFragment : BaseFragment<FragmentViewBinding, ViewViewModel>(
 
             when (imageType) {
                 1 -> {
-                    actionBar.btnActionBarCenter.onClick1 { confirmDelete() }
-                    btnEdit.onClick1 {
-                            navigateToEdit()
+                    actionBar.btnActionBarRight.onClick1 { confirmDelete() }
+                    actionBar.btnActionBarNextToRight.onClick1 {
+                        navigateToEdit()
                     }
-                    actionBar.btnActionBarNextToRight.onClick(1500) { shareImage() }
-                    actionBar.btnActionBarRight.onClick1 { downloadImage() }
-//                    btnBottomLeftSocial.onClick1 { shareToSocialApp(SocialShareManager.SocialApp.FACEBOOK) }
-//                    btnBottomRightSocial.onClick1 { shareToSocialApp(SocialShareManager.SocialApp.INSTAGRAM) }
+                    btnBottomLeft.onClick(1500) { shareImage() }
+                    btnBottomRight.onClick1 { downloadImage() }
+                    btnBottomLeftSocial.onClick1 {
+                        logSocialShareEvent("facebook")
+                        shareToSocialApp(SocialShareManager.SocialApp.FACEBOOK)
+                    }
+                    btnBottomRightSocial.onClick1 {
+                        logSocialShareEvent("instagram")
+                        shareToSocialApp(SocialShareManager.SocialApp.INSTAGRAM)
+                    }
                 }
 
                 2 -> {
-                    actionBar.btnActionBarCenter.onClick1 { confirmDelete() }
-                    actionBar.btnActionBarNextToRight.onClick(1500) { shareImage() }
-                    actionBar.btnActionBarRight.onClick1 { downloadImage() }
-//                    btnBottomLeftSocial.onClick1 { shareToSocialApp(SocialShareManager.SocialApp.FACEBOOK) }
-//                    btnBottomRightSocial.onClick1 { shareToSocialApp(SocialShareManager.SocialApp.INSTAGRAM) }
+                    actionBar.btnActionBarRight.onClick1 { confirmDelete() }
+                    btnBottomLeft.onClick(1500) { shareImage() }
+                    btnBottomRight.onClick1 { downloadImage() }
+                    btnBottomLeftSocial.onClick1 {
+                        logSocialShareEvent("facebook")
+                        shareToSocialApp(SocialShareManager.SocialApp.FACEBOOK)
+                    }
+                    btnBottomRightSocial.onClick1 {
+                        logSocialShareEvent("instagram")
+                        shareToSocialApp(SocialShareManager.SocialApp.INSTAGRAM)
+                    }
                 }
             }
         }
@@ -163,6 +184,23 @@ class ViewFragment : BaseFragment<FragmentViewBinding, ViewViewModel>(
         private const val EXTERNAL_SCREEN_RESTORE_DELAY_MS = 500L
     }
 
+    private fun logSocialShareEvent(socialName: String) {
+        val avatarPath = viewModelActivity.customizedCharacters.value
+            .firstOrNull { it.id == idEdit }
+            ?.avatar
+            .orEmpty()
+        val dataName = Uri.parse(avatarPath).pathSegments
+            .dropLast(1)
+            .lastOrNull()
+            .orEmpty()
+//
+//        logEventSocial(
+//            "click_share_$socialName",
+//            "click_share_${socialName}_$dataName",
+//            avatarPath
+//        )
+        Log.d("click_share", "click_share_${socialName}_$dataName -- ${avatarPath}")
+    }
     private fun shareToSocialApp(app: SocialShareManager.SocialApp) {
         val path = currentImagePath.takeIf { it.isNotBlank() } ?: imagePath
         when (socialShareManager.shareImage(path, app)) {
@@ -175,19 +213,19 @@ class ViewFragment : BaseFragment<FragmentViewBinding, ViewViewModel>(
 
     private fun shareImage() {
         if (imagePath.isEmpty()) return
-        val uri = FileProvider.getUriForFile(
+        val uri = androidx.core.content.FileProvider.getUriForFile(
             requireContext(),
             "${requireContext().packageName}.provider",
-            File(imagePath)
+            java.io.File(imagePath)
         )
         val intent = Intent(Intent.ACTION_SEND).apply {
             type = "image/*"
             putExtra(Intent.EXTRA_STREAM, uri)
             addFlags(
                 Intent.FLAG_GRANT_READ_URI_PERMISSION or
-                    Intent.FLAG_ACTIVITY_NEW_TASK)
+                        Intent.FLAG_ACTIVITY_NEW_TASK)
         }
-        startActivity(Intent.createChooser(intent, getString(R.string.share)))
+        startActivity(android.content.Intent.createChooser(intent, getString(R.string.share)))
     }
 // ViewFragment.kt
 
@@ -196,7 +234,7 @@ class ViewFragment : BaseFragment<FragmentViewBinding, ViewViewModel>(
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             performDownload(); return
         }
-        val permission = Manifest.permission.WRITE_EXTERNAL_STORAGE
+        val permission = android.Manifest.permission.WRITE_EXTERNAL_STORAGE
         when {
             requireContext().checkPermissions(arrayOf(permission)) -> performDownload()
             permissionViewModel.shouldGoToSettings(isStorage = true) -> {
@@ -258,11 +296,6 @@ class ViewFragment : BaseFragment<FragmentViewBinding, ViewViewModel>(
                 return
             }
 
-        if (!viewModelActivity.hasValidSelectionsForCustomized(idEdit)) {
-            showEditItemNotFoundDialog()
-            return
-        }
-
         val templateIndex = viewModelActivity.getTemplateIndexForCustomized(idEdit)
             .takeIf { it >= 0 }
             ?: run { showUnstableNetworkDialog(); return }  // ✅ không tìm thấy template → có thể do chưa load online
@@ -279,8 +312,8 @@ class ViewFragment : BaseFragment<FragmentViewBinding, ViewViewModel>(
         if (template.id.startsWith("online_")) {
             val onlineTemplateCount = viewModelActivity.templates.value
                 .count { it.id.startsWith("online_") }
-            if (!InternetExtension.isInternetAvailable(requireContext()) ||
-                !InternetExtension.isNetworkConnected(requireContext()) || onlineTemplateCount == 0
+            if (!isInternetAvailable(requireContext()) ||
+                !isNetworkConnected(requireContext()) || onlineTemplateCount == 0
             ) {
                 showUnstableNetworkDialog()
                 return
@@ -294,7 +327,8 @@ class ViewFragment : BaseFragment<FragmentViewBinding, ViewViewModel>(
             savedSelections = customized.selections.toCleanSelections(),
             isFlipped = customized.isFlipped
         )
-        findNavController().safeNavigate(R.id.action_view_to_customize, args)
+            findNavController().safeNavigate(R.id.action_view_to_customize, args)
+
     }
 
     private fun showEditItemNotFoundDialog() {
@@ -305,7 +339,7 @@ class ViewFragment : BaseFragment<FragmentViewBinding, ViewViewModel>(
     }
 
     private fun showToast(msg: String) =
-        Toast.makeText(requireContext(), msg, Toast.LENGTH_SHORT)
+        android.widget.Toast.makeText(requireContext(), msg, android.widget.Toast.LENGTH_SHORT)
             .show()
 
     override fun observeData() {

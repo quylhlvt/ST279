@@ -96,7 +96,7 @@
                         android:overScrollMode="never"
                         android:paddingHorizontal="@dimen/dimension_10"
                         android:layout_marginTop="@dimen/dimension_40"
-                        android:paddingBottom="@dimen/dimension_30"
+                        android:paddingBottom="@dimen/dimension_10"
                         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                         tools:itemCount="4"
                         tools:listitem="@layout/item_home_menu" />

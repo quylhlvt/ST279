@@ -42,7 +42,8 @@ class RandomFragment : BaseFragment<FragmentRandomBinding, RandomViewModel>(
     FragmentRandomBinding::inflate,
     RandomViewModel::class.java
 ) {
-    private  var  count = 0
+    private var count = 0
+
     // Thêm hàm này vào RandomFragment
     private fun isOnlineTemplate(templateIndex: Int): Boolean {
         return viewModelActivity.templates.value.getOrNull(templateIndex)
@@ -52,11 +53,18 @@ class RandomFragment : BaseFragment<FragmentRandomBinding, RandomViewModel>(
     private fun checkOnlineNetworkOrShowDialog(templateIndex: Int): Boolean {
         if (!isOnlineTemplate(templateIndex)) return false
         return when {
-            !InternetExtension.isInternetAvailable(requireContext()) -> { showUnstableNetworkDialog(); true }
-            !InternetExtension.isNetworkConnected(requireContext()) -> { showUnstableNetworkDialog(); true }
+            !InternetExtension.isInternetAvailable(requireContext()) -> {
+                showUnstableNetworkDialog(); true
+            }
+
+            !InternetExtension.isNetworkConnected(requireContext()) -> {
+                showUnstableNetworkDialog(); true
+            }
+
             else -> false
         }
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupBackPressHandler()
@@ -88,15 +96,19 @@ class RandomFragment : BaseFragment<FragmentRandomBinding, RandomViewModel>(
         if (!isAdded || isDetached) return
 
     }
-    override fun initView() {
 
-        Glide.with(binding.imageGif).load(R.drawable.gif).into(binding.imageGif)
+    override fun setupPreViews() {
+        super.setupPreViews()
+        Glide.with(binding.imageGif).asGif().load(R.drawable.gif).into(binding.imageGif)
+    }
+
+    override fun initView() {
         binding.imvImage.gone()
-        binding.progressLoading.gone()
         binding.imageGif.visible()
-        binding.setupActionBar()
         setSaveButtonEnabled(false)
-        binding.txtShow.isSelected = true
+        binding.setupActionBar()
+        binding.txtRandom.isSelected = true
+        binding.txtEdit.isSelected = true
     }
 
     private fun FragmentRandomBinding.setupActionBar() {
@@ -109,7 +121,7 @@ class RandomFragment : BaseFragment<FragmentRandomBinding, RandomViewModel>(
     override fun viewListener() {
         binding.apply {
             actionBar.btnActionBarLeft.onClick {
-                    popBack()
+                popBack()
 
             }
             // ✅ Nút random — check internet nếu template online
@@ -130,7 +142,7 @@ class RandomFragment : BaseFragment<FragmentRandomBinding, RandomViewModel>(
 
                 if (count > 1) {
 
-                        action()
+                    action()
 
                 } else {
                     action()
@@ -154,6 +166,15 @@ class RandomFragment : BaseFragment<FragmentRandomBinding, RandomViewModel>(
     }
 
     override fun observeData() {
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewModel.isDataReady.collect { ready ->
+                if (ready && viewModel.randomItem.value == null) {
+                    val isOnline =
+                        isNetworkConnected(requireContext()) && isInternetAvailable(requireContext())
+                    viewModel.randomize(isOnline = isOnline)
+                }
+            }
+        }
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.randomItem.collectLatest { item ->
                 item ?: return@collectLatest
@@ -180,7 +201,7 @@ class RandomFragment : BaseFragment<FragmentRandomBinding, RandomViewModel>(
     }
 
     private fun renderCharacter(item: RandomViewModel.RandomItem) {
-        setSaveButtonEnabled(false)
+        showLoading()
         viewLifecycleOwner.lifecycleScope.launch {
             val paths = item.resolvedPaths.filterNotNull()
             if (paths.isEmpty()) return@launch
@@ -239,8 +260,7 @@ class RandomFragment : BaseFragment<FragmentRandomBinding, RandomViewModel>(
             setImageDrawable(null)
             gone()
         }
-        binding.imageGif.gone()
-        binding.progressLoading.visible()
+        binding.imageGif.visible()
         setSaveButtonEnabled(false)
     }
 
@@ -251,19 +271,23 @@ class RandomFragment : BaseFragment<FragmentRandomBinding, RandomViewModel>(
             visible()
         }
         binding.imageGif.gone()
-        binding.progressLoading.gone()
         setSaveButtonEnabled(true)
     }
 
     private fun setSaveButtonEnabled(enabled: Boolean) {
         binding.btnEdit.isEnabled = enabled
         binding.btnEdit.isClickable = enabled
+        binding.btnEdit.alpha = if (enabled) 1f else 0.5f
         binding.btnEdit.background =
             ContextCompat.getDrawable(
                 binding.root.context,
                 if (enabled) R.drawable.bg_frame_random_edit
                 else R.drawable.bg_frame_random_unedit
-            )    }
+            )
+        binding.random.isEnabled = enabled
+        binding.random.isClickable = enabled
+        binding.random.alpha = if (enabled) 1f else 0.5f
+    }
 
     private fun mergeBitmaps(bitmaps: List<Bitmap>): Bitmap {
         val size = 800

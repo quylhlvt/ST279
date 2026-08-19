@@ -38,8 +38,8 @@ import com.ava.ui.main.myPony.adapter.MyDesignAdapter
 import com.ava.ui.onboarding.permission.PermissionViewModel
 import com.ava.utils.share.whatsapp.WhatsappSharingFragment
 import com.ava.R
+import com.ava.core.extention.setTextActionBar
 import com.ava.databinding.FragmentMyPonyBinding
-import com.ava.databinding.LayoutActionbar3Binding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
@@ -97,18 +97,15 @@ class MyPonyFragment : WhatsappSharingFragment<FragmentMyPonyBinding, MyPonyView
     private fun setupActionBar() {
         binding.actionBar.apply {
             setImageActionBar(btnActionBarLeft, R.drawable.back_app)
-            setImageActionBar(btnActionBarCenter, R.drawable.ic_delete_all)
+            setImageActionBar(btnActionBarNextToRight1, R.drawable.ic_delete_all)
+            setTextActionBar(tvCenter, getString(R.string.my_creation))
             setImageActionBar(
-                btnActionBarNextToRight,
-                R.drawable.ic_share_mycreation
+                btnActionBarRight1,
+                R.drawable.ic_select_all
             )
-            setImageActionBar(
-                btnActionBarRight,
-                R.drawable.ic_download_mycreation
-            )
-            btnActionBarCenter.invisible()
-            btnActionBarNextToRight.invisible()
-            btnActionBarRight.invisible()
+            
+            btnActionBarRight1.invisible()
+            btnActionBarNextToRight1.invisible()
         }
     }
 
@@ -198,9 +195,10 @@ class MyPonyFragment : WhatsappSharingFragment<FragmentMyPonyBinding, MyPonyView
         binding.apply {
             btnWhatsapp.onClick(1000) { handleWhatsAppShare() }
             btnTelegram.onClick(1000) { handleTelegramShare() }
-            actionBar.btnActionBarRight.onClick(1000) { handleDownload() }
-            actionBar.btnActionBarNextToRight.onClick(1000) { handleShare() }
-            actionBar.btnActionBarCenter.onClick { handleDeleteSelected() }  // ✅ thêm
+            btnDownload.onClick(1000) { handleDownload() }
+            btnShare.onClick(1000) { handleShare() }
+            actionBar.btnActionBarNextToRight1.onClick { handleDeleteSelected() }
+            actionBar.btnActionBarRight1.onClick { handleSelectAll() }
 
         }
     }
@@ -336,21 +334,26 @@ class MyPonyFragment : WhatsappSharingFragment<FragmentMyPonyBinding, MyPonyView
                 if (hasSelection) {
                     // ✅ Long click: hiện cả 4 nút
                     lnlBottomTop.visible()  // WhatsApp + Telegram
+                    lnlBottomTopShadown.visible()
+                    llBottomShadown.visible()
                     llBottom.visible()      // Share + Download
                     actionBar.apply {
-                        btnActionBarCenter.visible()
-                        btnActionBarNextToRight.visible()
-                        btnActionBarRight.visible()
+                        btnActionBarNextToRight1.visible()
+                        btnActionBarRight1.visible()
+                        btnActionBarRight1.setImageResource(
+                            if (allSelected) R.drawable.ic_select_all else R.drawable.ic_not_select_all
+                        )
                     }
                     // Share + Download
                 } else {
                     // ✅ Bình thường có item: chỉ WhatsApp + Telegram
                     lnlBottomTop.visible()
                     llBottom.gone()
+                    lnlBottomTopShadown.visible()
+                    llBottomShadown.gone()
                     actionBar.apply {
-                        btnActionBarCenter.invisible()
-                        btnActionBarNextToRight.invisible()
-                        btnActionBarRight.invisible()
+                        btnActionBarRight1.invisible()
+                        btnActionBarNextToRight1.invisible()
                     }
                 }
 
@@ -360,20 +363,24 @@ class MyPonyFragment : WhatsappSharingFragment<FragmentMyPonyBinding, MyPonyView
                     // ✅ Long click: chỉ Share + Download
                     lnlBottom.visible()
                     actionBar.apply {
-                        btnActionBarCenter.visible()
-                        btnActionBarNextToRight.visible()
-                        btnActionBarRight.visible()
+                        btnActionBarRight1.visible()
+                        btnActionBarNextToRight1.visible()
+                        btnActionBarRight1.setImageResource(
+                            if (allSelected) R.drawable.ic_select_all else R.drawable.ic_not_select_all
+                        )
                     }
                     lnlBottomTop.gone()
                     llBottom.visible()
+                    lnlBottomTopShadown.gone()
+                    llBottomShadown.visible()
                 } else {
                     // ✅ Bình thường hoặc không có item: ẩn hết
                     lnlBottom.gone()
                     llBottom.gone()
+                    llBottomShadown.gone()
                     actionBar.apply {
-                        btnActionBarCenter.invisible()
-                        btnActionBarNextToRight.invisible()
-                        btnActionBarRight.invisible()
+                        btnActionBarRight1.invisible()
+                        btnActionBarNextToRight1.invisible()
                     }
                 }
             }
