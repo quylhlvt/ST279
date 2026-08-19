@@ -1,6 +1,7 @@
 package com.ava.ui.main.customize
 
 import android.graphics.Color
+import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
 import androidx.core.view.isVisible
@@ -36,20 +37,13 @@ class NavAdapter :
         val shimmerDrawable = ShimmerDrawable().apply { setShimmer(DataLocal.shimmer) }
 
         binding.apply {
-            val ctx = root.context
-
-            frame1.setCardBackgroundColor(ContextCompat.getColor(
-                ctx,
-                if (posNav == position) R.color.app_color2 else R.color.white2
-            ))
-
+            forcus.visibility = if(posNav ==position) View.VISIBLE else View.GONE
         Glide.with(imvImage)
             .load(item.nav)
             .diskCacheStrategy(DiskCacheStrategy.ALL)
             .override(256)
             .dontAnimate()
             .placeholder(shimmerDrawable)
-            .error(shimmerDrawable)
             .into(imvImage)
 
         root.setOnClickListener { onClick?.invoke(position) }

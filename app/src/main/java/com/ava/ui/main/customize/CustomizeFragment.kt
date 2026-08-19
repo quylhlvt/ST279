@@ -121,7 +121,7 @@ class CustomizeFragment : BaseFragment<FragmentCustomizeBinding, CustomizeViewMo
         }
         binding.actionBar.apply {
             setImageActionBar(btnActionBarLeft, R.drawable.back_app)
-            setImageActionBar(btnActionBarCenter1, R.drawable.ic_reset_all_custom)
+            setImageActionBar(btnActionBarCenter2, R.drawable.ic_reset_all_custom)
             setImageActionBar(btnActionBarCenter, R.drawable.ic_flip_all_custom)
             setMaterialCardViewActionBar1(
                 btnActionBarRightText,
@@ -229,9 +229,6 @@ class CustomizeFragment : BaseFragment<FragmentCustomizeBinding, CustomizeViewMo
         binding.btnExitScale.onClick {
             closeScalePanel()
         }
-        binding.imgFlip.onClick {
-            viewModel.toggleFlip()
-        }
 
         binding.ratioRight.onClickAndHold { changeCurrentTransform { it.copy(rotation = normalizeRotation(it.rotation + 5f)) } }
         binding.ratioLeft.onClickAndHold { changeCurrentTransform { it.copy(rotation = normalizeRotation(it.rotation - 5f)) } }
@@ -300,7 +297,10 @@ class CustomizeFragment : BaseFragment<FragmentCustomizeBinding, CustomizeViewMo
 //                    )
 //                }
 //            }
-            actionBar.btnActionBarCenter1.setOnClickListener {
+            actionBar.btnActionBarCenter.setOnClickListener {
+                viewModel.toggleFlip()
+            }
+            actionBar.btnActionBarCenter2.setOnClickListener {
                 showConfirmDialog(
                     title = getString(R.string.reset),
                     message = getString(R.string.do_you_want_to_reset_all),
@@ -322,7 +322,6 @@ class CustomizeFragment : BaseFragment<FragmentCustomizeBinding, CustomizeViewMo
                 )
             }
             actionBar.btnActionBarLeft.onClick {  confirmExit()}
-//            actionBar.btnActionBarCenter.onClick { viewModel.toggleFlip() }
             actionBar.btnActionBarRightText.onClick { if (canSave) performSave() }
             actionBar.btnActionBarRightText.setOnClickListener {
                 if (!canSave) return@setOnClickListener
