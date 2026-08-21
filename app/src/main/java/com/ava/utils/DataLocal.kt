@@ -71,12 +71,14 @@ object DataLocal {
     val bottomNavigationNotSelect = arrayListOf(
         R.drawable.ic_background,
         R.drawable.ic_sticker,
+        R.drawable.ic_speech,
         R.drawable.ic_text,
     )
 
     val bottomNavigationSelected = arrayListOf(
         R.drawable.ic_background_selected,
         R.drawable.ic_sticker_selected,
+        R.drawable.ic_speech_selected,
         R.drawable.ic_text_selected,
     )
 

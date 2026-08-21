@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.appcompat.widget.AppCompatImageView
+import androidx.core.view.isVisible
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
@@ -60,7 +61,6 @@ class CustomizeFragment : BaseFragment<FragmentCustomizeBinding, CustomizeViewMo
     private val layerViews = arrayListOf<AppCompatImageView>()
     private val navToLayerIndex = mutableMapOf<String, Int>()
     private var visibleNavIndices: List<Int> = emptyList()
-
     private val adapterNav by lazy { NavAdapter() }
     private val adapterColor by lazy { ColorAdapter() }
     private val adapterPart by lazy { PartAdapter() }
@@ -136,7 +136,7 @@ class CustomizeFragment : BaseFragment<FragmentCustomizeBinding, CustomizeViewMo
 
     private fun applyTabletLayout() {
         val isTablet = resources.configuration.smallestScreenWidthDp >= 600
-        binding.view17.visibility = if (isTablet) View.GONE else View.VISIBLE
+//        binding.view17.visibility = if (isTablet) View.GONE else View.VISIBLE
     }
 
     // CustomizeFragment.kt - readArgsAndInit() — FIX chính ở đây
@@ -211,11 +211,13 @@ class CustomizeFragment : BaseFragment<FragmentCustomizeBinding, CustomizeViewMo
         binding.frameScale.animate().cancel()
         isScaleActive = !isScaleActive
         if (isScaleActive) {
+            binding.imgScale.setImageResource(R.drawable.ic_scale_cus_open)
             binding.frameScale.visibility = View.VISIBLE
             binding.rcvPart.visibility = View.INVISIBLE
             binding.frameScale.alpha = 0f
             binding.frameScale.animate().alpha(1f).setDuration(200).start()
         } else {
+            binding.imgScale.setImageResource(R.drawable.ic_scale_cus)
             closeScalePanel(animate = true)
         }
     }
@@ -226,9 +228,9 @@ class CustomizeFragment : BaseFragment<FragmentCustomizeBinding, CustomizeViewMo
             if (viewModel.resolvePathAt(viewModel.state.value.currentNavIndex) == null) return@onClick
             toggleScalePanel()
         }
-        binding.btnExitScale.onClick {
-            closeScalePanel()
-        }
+//        binding.imgScale.onClick {
+//            closeScalePanel()
+//        }
 
         binding.ratioRight.onClickAndHold { changeCurrentTransform { it.copy(rotation = normalizeRotation(it.rotation + 5f)) } }
         binding.ratioLeft.onClickAndHold { changeCurrentTransform { it.copy(rotation = normalizeRotation(it.rotation - 5f)) } }
@@ -261,28 +263,22 @@ class CustomizeFragment : BaseFragment<FragmentCustomizeBinding, CustomizeViewMo
         }
 
         binding.apply {
-            end.onClick {
+
+            imgChangColor.onClick {
                 val navPos = viewModel.state.value.currentNavIndex
-                if (navPos < arrShowColor.size) arrShowColor[navPos] = false
-                llColor.animate().alpha(0f).setDuration(200).withEndAction {
-                    llColor.visibility = View.INVISIBLE
-                }.start()
+                if (!viewModel.state.value.hasMultipleColors) return@onClick
+                if (llColor.isVisible) {
+                    if (navPos < arrShowColor.size) arrShowColor[navPos] = false
+                    llColor.animate().alpha(0f).setDuration(200).withEndAction {
+                        llColor.visibility = View.INVISIBLE
+                    }.start()
+                } else {
+                    if (navPos < arrShowColor.size) arrShowColor[navPos] = true
+                    llColor.visibility = View.VISIBLE
+                    llColor.alpha = 0f
+                    llColor.animate().alpha(1f).setDuration(200).start()
+                }
             }
-//            imgChangColor.onClick {
-//                val navPos = viewModel.state.value.currentNavIndex
-//                if (!viewModel.state.value.hasMultipleColors) return@onClick
-//                if (llColor.isVisible) {
-//                    if (navPos < arrShowColor.size) arrShowColor[navPos] = false
-//                    llColor.animate().alpha(0f).setDuration(200).withEndAction {
-//                        llColor.visibility = View.INVISIBLE
-//                    }.start()
-//                } else {
-//                    if (navPos < arrShowColor.size) arrShowColor[navPos] = true
-//                    llColor.visibility = View.VISIBLE
-//                    llColor.alpha = 0f
-//                    llColor.animate().alpha(1f).setDuration(200).start()
-//                }
-//            }
 //            imgRandom.onClick {
 //                if (!checkOnlineNetworkOrShowDialog()) {
 //                    showConfirmDialog(
@@ -535,15 +531,18 @@ class CustomizeFragment : BaseFragment<FragmentCustomizeBinding, CustomizeViewMo
             if (navPos < arrShowColor.size && arrShowColor[navPos]) {
                 binding.llColor.animate().alpha(1f).setDuration(150).withStartAction {
                     binding.llColor.visibility = View.VISIBLE
+                    binding.imgChangColor.visibility = View.VISIBLE
                 }.start()
             } else {
                 binding.llColor.animate().alpha(0f).setDuration(150).withEndAction {
                     binding.llColor.visibility = View.GONE
+
                 }.start()
             }
         } else {
             binding.llColor.animate().alpha(0f).setDuration(150).withEndAction {
                 binding.llColor.visibility = View.GONE
+                binding.imgChangColor.visibility = View.GONE
             }.start()
         }
 
@@ -620,7 +619,7 @@ class CustomizeFragment : BaseFragment<FragmentCustomizeBinding, CustomizeViewMo
         val canMoveDown = hasLayer && transform.translationY < maxY - TRANSFORM_EPSILON
 
         binding.imgScale.isEnabled = hasLayer
-        binding.imgScale.alpha = if (hasLayer) 1f else 0.4f
+        binding.imgScale.setImageResource (if (hasLayer) R.drawable.ic_scale_cus else R.drawable.ic_scale_cus_none)
         binding.scalePlus.isEnabled = canScaleUp
         binding.scalePlus.alpha = if (canScaleUp) 1f else 0.4f
         binding.scaleMinus.isEnabled = canScaleDown

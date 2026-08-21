@@ -278,12 +278,7 @@ class RandomFragment : BaseFragment<FragmentRandomBinding, RandomViewModel>(
         binding.btnEdit.isEnabled = enabled
         binding.btnEdit.isClickable = enabled
         binding.btnEdit.alpha = if (enabled) 1f else 0.5f
-        binding.btnEdit.background =
-            ContextCompat.getDrawable(
-                binding.root.context,
-                if (enabled) R.drawable.bg_frame_random_edit
-                else R.drawable.bg_frame_random_unedit
-            )
+
         binding.random.isEnabled = enabled
         binding.random.isClickable = enabled
         binding.random.alpha = if (enabled) 1f else 0.5f

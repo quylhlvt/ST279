@@ -11,6 +11,6 @@ data class BackgroundCategoryModel(
 
     companion object {
         private const val BACKGROUND_BASE_URL =
-            "https://lvtglobal.tech/public/app/ST287_AvatarMakerHighSchoolOC/bg/background"
+            "https://lvtglobal.tech/public/app/ST281_FoodMaker/bg/background"
     }
 }

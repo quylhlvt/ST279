@@ -11,6 +11,6 @@ data class StickerCategoryModel(
 
     companion object {
         private const val STICKER_BASE_URL =
-            "https://lvtglobal.tech/public/app/ST287_AvatarMakerHighSchoolOC/bg/sticker"
+            "https://lvtglobal.tech/public/app/ST281_FoodMaker/bg/sticker"
     }
 }

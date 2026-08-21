@@ -2,38 +2,32 @@ package com.ava.ui.main.success
 
 import android.Manifest
 import android.content.Intent
-import android.graphics.Rect
 import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.view.WindowManager
-import android.view.TouchDelegate
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.FileProvider
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
+import com.ava.R
 import com.ava.core.base.BaseFragment
-import com.ava.core.extention.InternetExtension
 import com.ava.core.extention.checkPermissions
 import com.ava.core.extention.goToSettings
 import com.ava.core.extention.loadImage
 import com.ava.core.extention.onClick
 import com.ava.core.extention.onClick1
-import com.ava.core.extention.safeNavigate
 import com.ava.core.extention.setImageActionBar
-import com.ava.core.extention.toCleanSelections
+import com.ava.core.extention.visible
 import com.ava.core.helper.PermissionRequestHelper
-import com.ava.ui.main.customize.CustomizeFragment
+import com.ava.databinding.FragmentSuccessBinding
 import com.ava.ui.onboarding.permission.PermissionViewModel
 import com.ava.utils.share.SocialShareManager
-import com.ava.R
-import com.ava.databinding.FragmentSuccessBinding
 import dagger.hilt.android.AndroidEntryPoint
 import java.io.File
-import kotlin.getValue
+
 @AndroidEntryPoint
 class SuccessFragment : BaseFragment<FragmentSuccessBinding, SuccessViewModel>(
     FragmentSuccessBinding::inflate,
@@ -65,7 +59,6 @@ class SuccessFragment : BaseFragment<FragmentSuccessBinding, SuccessViewModel>(
         super.onResume()
         hideLoadingSafe()
         hideGlobalDialogSafe()
-        installDownloadTouchDelegate()
         if (!isReturningFromExternalScreen || view == null) return
 
         restoreWindowInteractions()
@@ -83,30 +76,9 @@ class SuccessFragment : BaseFragment<FragmentSuccessBinding, SuccessViewModel>(
         }, EXTERNAL_SCREEN_RESTORE_DELAY_MS)
     }
 
-    private fun installDownloadTouchDelegate() {
-        if (view == null) return
-        binding.root.post {
-            if (!isAdded || view == null || binding.download.width <= 0 || binding.download.height <= 0) return@post
 
-            binding.download.isEnabled = true
-            binding.download.isClickable = true
-
-            val rootLocation = IntArray(2)
-            val downloadLocation = IntArray(2)
-            binding.root.getLocationOnScreen(rootLocation)
-            binding.download.getLocationOnScreen(downloadLocation)
-            val left = downloadLocation[0] - rootLocation[0]
-            val top = downloadLocation[1] - rootLocation[1]
-
-            binding.root.touchDelegate = TouchDelegate(
-                Rect(left, top, left + binding.download.width, top + binding.download.height),
-                binding.download
-            )
-        }
-    }
 
     private fun restoreViewInteractions() {
-        if (!isAdded || view == null) return
         binding.root.isEnabled = true
         binding.actionBar.root.isEnabled = true
         binding.actionBar.btnActionBarLeft.isEnabled = true
@@ -115,8 +87,14 @@ class SuccessFragment : BaseFragment<FragmentSuccessBinding, SuccessViewModel>(
         binding.actionBar.btnActionBarNextToRight.isClickable = true
         binding.actionBar.btnActionBarRight.isEnabled = true
         binding.actionBar.btnActionBarRight.isClickable = true
-//        binding.btnEdit.isEnabled = true
-//        binding.btnEdit.isClickable = true
+        binding.btnBottomLeft.isEnabled = true
+        binding.btnBottomLeft.isClickable = true
+        binding.btnBottomRight.isEnabled = true
+        binding.btnBottomRight.isClickable = true
+        binding.btnBottomLeftSocial.isEnabled = true
+        binding.btnBottomLeftSocial.isClickable = true
+        binding.btnBottomRightSocial.isEnabled = true
+        binding.btnBottomRightSocial.isClickable = true
         binding.root.requestLayout()
         binding.root.invalidate()
     }
@@ -133,64 +111,77 @@ class SuccessFragment : BaseFragment<FragmentSuccessBinding, SuccessViewModel>(
 
         currentImagePath = imagePath
         binding.apply {
-            setImageActionBar(actionBar.btnActionBarLeft, R.drawable.back_app1)
+            setImageActionBar(actionBar.btnActionBarLeft, R.drawable.back_app)
             loadImage(requireContext(), imagePath, imvImage)
-            txtDownload.apply  {
+            txtLeftSocial.apply  {
                 isSelected =true
             }
-            setImageActionBar(actionBar.btnActionBarCenter, R.drawable.ic_share_mycreation)
-            setImageActionBar(actionBar.btnActionBarNextToRight, R.drawable.ic_mycreation)
-//            setTextActionBar(actionBar.tvCenter, getString(R.string.successful))
-
+            txtRightSocial.apply  {
+                isSelected =true
+            }
+            txtLeft.apply  {
+                isSelected =true
+                visible();}
+            txtRight.apply {
+                isSelected =true
+                visible();}
+            setImageActionBar(actionBar.btnActionBarNextToRight, R.drawable.ic_share_success)
             setImageActionBar(actionBar.btnActionBarRight, R.drawable.ic_home)
-
+            tvSuccess.isSelected = true
         }
     }
 
     override fun viewListener() {
         binding.apply {
-            // `download` is drawn outside its parent bounds by the current XML.
-            // Delegate that visible area from the root so it remains clickable
-            // without changing the layout.
-            installDownloadTouchDelegate()
-
             actionBar.btnActionBarLeft.onClick1 { findNavController().navigateUp() }
 
             // Home
             actionBar.btnActionBarRight.onClick1 {
                     findNavController().navigate(
                         R.id.action_success_to_home, null,
-                        NavOptions.Builder()
+                        androidx.navigation.NavOptions.Builder()
                             .setPopUpTo(R.id.homeFragment, true).build()
                     )
-
-
             }
             // Share
-            actionBar.btnActionBarCenter.onClick( 1500) { shareImage() }
+            actionBar.btnActionBarNextToRight.onClick( 1500) { shareImage() }
 
             // MyCreation
-            actionBar.btnActionBarNextToRight.onClick1 {
+            btnBottomLeft.onClick1 {
                     findNavController().navigate(
                         R.id.action_success_to_myPony, null,
-                        NavOptions.Builder()
+                        androidx.navigation.NavOptions.Builder()
                             .setPopUpTo(R.id.homeFragment, false).build()
                     )
-
 
             }
 
             // Download
-            download.onClick1 { downloadImage() }
-//            btnBottomLeftSocial.onClick1 {
-//                shareToSocialApp(SocialShareManager.SocialApp.FACEBOOK)
-//            }
-//            btnBottomRightSocial.onClick1 {
-//                shareToSocialApp(SocialShareManager.SocialApp.INSTAGRAM)
-//            }
+            btnBottomRight.onClick1 { downloadImage() }
+            btnBottomLeftSocial.onClick1 {
+//                logSocialShareEvent("facebook")
+                shareToSocialApp(SocialShareManager.SocialApp.FACEBOOK)
+            }
+            btnBottomRightSocial.onClick1 {
+//                logSocialShareEvent("instagram")
+                shareToSocialApp(SocialShareManager.SocialApp.INSTAGRAM)
+            }
         }
     }
-
+//    private fun logSocialShareEvent(socialName: String) {
+//        val dataName = Uri.parse(avatarUrl).pathSegments
+//            .dropLast(1)
+//            .lastOrNull()
+//            .orEmpty()
+//
+//        logEventSocial(
+//            "click_share_$socialName",
+//            "click_share_${socialName}_$dataName",
+//            avatarUrl
+//        )
+//        Log.d("logevenfb", "click_share_${socialName}_$dataName -- ${avatarUrl}")
+//
+//    }
     private fun shareToSocialApp(app: SocialShareManager.SocialApp) {
         val path = currentImagePath.takeIf { it.isNotBlank() } ?: imagePath
         when (socialShareManager.shareImage(path, app)) {
@@ -254,55 +245,7 @@ class SuccessFragment : BaseFragment<FragmentSuccessBinding, SuccessViewModel>(
         }
     }
 
-    private fun confirmDelete() {
-        showConfirmDialog(
-            title = getString(R.string.delete),
-            message = getString(R.string.are_you_sure_want_to_delete_this_item),
-            onYes = {
-                viewModel.deleteFile(
-                    path     = imagePath,
-                    isAvatar = imageType == 1,
-                    idEdit   = idEdit,
-                    onDone   = {
-                        findNavController().navigateUp()
-                    }
-                )
-            },
-            onNo = null
-        )
-    }
-    private fun navigateToEdit() {
-        if (idEdit.isEmpty() || imageType != 1) return
 
-        val customized = viewModelActivity.customizedCharacters.value
-            .firstOrNull { it.id == idEdit }
-            ?: run { showToast("Character not found"); return }
-
-        val templateIndex = viewModelActivity.getTemplateIndexForCustomized(idEdit)
-            .takeIf { it >= 0 }
-            ?: run { showUnstableNetworkDialog(); return }  // ✅ không tìm thấy template → có thể do chưa load online
-
-        val template = viewModelActivity.templates.value.getOrNull(templateIndex)
-
-        // ✅ Thêm check: online template + mất mạng + online templates < 2
-        if (template?.id?.startsWith("online_") == true) {
-            val onlineTemplateCount = viewModelActivity.templates.value
-                .count { it.id.startsWith("online_") }
-            if (!InternetExtension.isInternetAvailable(requireContext()) || onlineTemplateCount < 2) {
-                showUnstableNetworkDialog()
-                return
-            }
-        }
-
-        val args = CustomizeFragment.newArgs(
-            templateIndex   = templateIndex,
-            isEdit          = true,
-            customizedId    = idEdit,
-            savedSelections = customized.selections.toCleanSelections(),
-            isFlipped       = customized.isFlipped
-        )
-        findNavController().safeNavigate(R.id.action_view_to_customize, args)
-    }
 
     private fun showToast(msg: String) =
         Toast.makeText(requireContext(), msg, Toast.LENGTH_SHORT).show()

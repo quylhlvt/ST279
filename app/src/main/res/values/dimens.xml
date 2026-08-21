@@ -74,6 +74,7 @@
     <dimen name="dimension_160">160dp</dimen>
     <dimen name="dimension_170">170dp</dimen>
     <dimen name="dimension_180">180dp</dimen>
+    <dimen name="dimension_200">200dp</dimen>
     <dimen name="dimension_250">250dp</dimen>
     <dimen name="dimension_314">314dp</dimen>
     <dimen name="dimension_328">328dp</dimen>

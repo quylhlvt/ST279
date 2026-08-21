@@ -21,27 +21,26 @@ class BackgroundImageAdapter : BaseAdapter<SelectedAddModel, ItemBackgroundImage
     var currentSelected = -1
 
     override fun onBind(binding: ItemBackgroundImageBinding, item: SelectedAddModel, position: Int) {
-        val context = binding.root.context
         val shimmerDrawable = ShimmerDrawable().apply { setShimmer(DataLocal.shimmer1) }
 
         binding.apply {
+            tvAddImage.isSelected = true
             if (currentSelected == position) {
                 materiaForcus.visible()
             } else {
                 materiaForcus.gone()
             }
-            if (position == 1) {
+            if (position == ADD_BACKGROUND_POSITION) {
                 lnlAddItem.visible()
                 imvImage.gone()
                 imvImageNone.gone()
                 lnlAddItem.onClick { onAddImageClick() }
-            } else if (position ==0){
+            } else if (position == NONE_BACKGROUND_POSITION) {
                 imvImageNone.visible()
                 imvImage.gone()
                 lnlAddItem.gone()
                 imvImageNone.onClick { onNoneImageClick() }
-            }
-            else {
+            } else {
                 lnlAddItem.gone()
                 imvImageNone.gone()
                 imvImage.visible()
@@ -73,5 +72,10 @@ class BackgroundImageAdapter : BaseAdapter<SelectedAddModel, ItemBackgroundImage
         val old = currentSelected
         currentSelected = -1
         notifyItemChanged(old)
+    }
+
+    private companion object {
+        const val ADD_BACKGROUND_POSITION = 0
+        const val NONE_BACKGROUND_POSITION = 1
     }
 }

@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
@@ -285,33 +286,27 @@ class ShowFragment : BaseFragment<FragmentShowBinding, ShowViewModel>(
             }
             close.onClick { imgShowBig.gone() }
 
-            end.onClick {
-                val navPos = viewModel.state.value.currentNavIndex
-                if (navPos < arrShowColor.size) arrShowColor[navPos] = false
-                llColor.animate().alpha(0f).setDuration(200).withEndAction {
-                    llColor.visibility = View.INVISIBLE
-                }.start()
-            }
+
 
 
 
             // ── Color toggle ──────────────────────────────────────────────────────
-//            imgChangColor.onClick {
-//                if (checkOnlineNetworkOrShowDialog()) return@onClick              // ← guard
-//                val navPos = viewModel.state.value.currentNavIndex
-//                if (!viewModel.state.value.hasMultipleColors) return@onClick
-//                if (llColor.isVisible) {
-//                    if (navPos < arrShowColor.size) arrShowColor[navPos] = false
-//                    llColor.animate().alpha(0f).setDuration(200).withEndAction {
-//                        llColor.visibility = View.INVISIBLE
-//                    }.start()
-//                } else {
-//                    if (navPos < arrShowColor.size) arrShowColor[navPos] = true
-//                    llColor.visibility = View.VISIBLE
-//                    llColor.alpha = 0f
-//                    llColor.animate().alpha(1f).setDuration(200).start()
-//                }
-//            }
+            imgChangColor.onClick {
+                if (checkOnlineNetworkOrShowDialog()) return@onClick              // ← guard
+                val navPos = viewModel.state.value.currentNavIndex
+                if (!viewModel.state.value.hasMultipleColors) return@onClick
+                if (llColor.isVisible) {
+                    if (navPos < arrShowColor.size) arrShowColor[navPos] = false
+                    llColor.animate().alpha(0f).setDuration(200).withEndAction {
+                        llColor.visibility = View.INVISIBLE
+                    }.start()
+                } else {
+                    if (navPos < arrShowColor.size) arrShowColor[navPos] = true
+                    llColor.visibility = View.VISIBLE
+                    llColor.alpha = 0f
+                    llColor.animate().alpha(1f).setDuration(200).start()
+                }
+            }
         }
 
         // ── Nav ───────────────────────────────────────────────────────────────────

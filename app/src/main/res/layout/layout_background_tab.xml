@@ -1,39 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/lnlBackground"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="240">
 
-    <View
-        android:id="@+id/view3"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dimension_0"
-        android:layout_marginBottom="@dimen/dimension_0"
-        android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@+id/linear"
-        app:layout_constraintDimensionRatio="3.6:0.16"/>
     <LinearLayout
         android:id="@+id/linear"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintDimensionRatio="3.6:0.32"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimension_0"
-        android:paddingHorizontal="@dimen/dimension_0"
-        android:layout_weight="2"
+        android:paddingHorizontal="@dimen/dimension_1"
+        android:layout_weight="40"
+        android:weightSum="2"
         android:elevation="@dimen/dimension_2"
         android:orientation="horizontal">
 
-        <com.google.android.material.card.MaterialCardView
+        <FrameLayout
             android:id="@+id/btnBackgroundImage"
             android:layout_width="@dimen/dimension_0"
-            app:cardCornerRadius="@dimen/dimension_8_1"
-            app:cardBackgroundColor="@color/app_color2"
             android:layout_height="match_parent"
             android:layout_gravity="center"
+            android:background="@drawable/frame_select_add"
             app:strokeWidth="@dimen/dimension_0"
-            android:layout_marginHorizontal="@dimen/dimension_4"
             android:layout_weight="1">
 
 
@@ -44,26 +35,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:paddingVertical="@dimen/dimension_2"
                 android:text="@string/image"
-                android:fontFamily="@font/londrina_solid_regular"
-                app:outerStrokeColor="@color/app_color"
-                app:outerStrokeWidth="@dimen/dimension_3"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_size_16"
+                android:fontFamily="@font/pacifico_regular"
+                android:textColor="@color/app_color"
+                android:textSize="@dimen/text_size_20"
                 tools:ignore="NestedWeights" />
 
-        </com.google.android.material.card.MaterialCardView>
+        </FrameLayout>
 
-        <com.google.android.material.card.MaterialCardView
+        <FrameLayout
             android:id="@+id/btnBackgroundColor"
             android:layout_width="@dimen/dimension_0"
-            app:cardCornerRadius="@dimen/dimension_8_1"
-            app:strokeWidth="@dimen/dimension_0"
-            app:cardBackgroundColor="@color/gray1"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_marginHorizontal="@dimen/dimension_8"
             android:layout_weight="1">
 
 
@@ -74,43 +58,72 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:paddingVertical="@dimen/dimension_2"
                 android:text="@string/color"
-                android:fontFamily="@font/londrina_solid_regular"
-                app:outerStrokeColor="@color/app_color"
-                app:outerStrokeWidth="@dimen/dimension_3"
+                android:fontFamily="@font/pacifico_regular"
                 android:textColor="@color/white"
-                android:textSize="@dimen/text_size_16" />
+                android:textSize="@dimen/text_size_20" />
 
-        </com.google.android.material.card.MaterialCardView>
+        </FrameLayout>
     </LinearLayout>
-
     <FrameLayout
+        android:layout_marginTop="@dimen/dimension_4"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginHorizontal="@dimen/dimension_4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view3">
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rcvBackgroundImage"
+        android:layout_height="@dimen/dimension_0"
+        android:paddingHorizontal="@dimen/dimension_1"
+        android:layout_weight="200">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tabImage"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/relative"
-            app:spanCount="5"
-            tools:itemCount="20"
-            tools:listitem="@layout/item_background_image" />
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:id="@+id/relative"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimension_0"
+                android:gravity="center"
+                app:layout_constraintDimensionRatio="3.6:0.36"
+                app:layout_constraintTop_toTopOf="parent">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcvtTittle"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:elevation="@dimen/dimension_2"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/item_tittle_background_image"
+                    />
+
+            </RelativeLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvBackgroundImage"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/dimension_16"
+                app:layout_constraintTop_toBottomOf="@+id/relative"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_height="@dimen/dimension_0"
+                android:layout_marginTop="@dimen/dimension_13"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="5"
+                tools:itemCount="30"
+                tools:listitem="@layout/item_background_image" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcvBackgroundColor"
             android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/dimension_13"
+            app:layout_constraintTop_toBottomOf="@+id/relative"
+            app:layout_constraintBottom_toBottomOf="parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dimension_12"
             android:visibility="gone"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/relative"
             app:spanCount="5"
-            tools:itemCount="20"
             tools:listitem="@layout/item_background_color" />
     </FrameLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

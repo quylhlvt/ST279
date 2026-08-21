@@ -96,8 +96,8 @@ class AddCharacterViewModel @Inject constructor(
         speeches: List<String>
     ) {
         backgroundImageList.clear()
-        backgroundImageList.add(SelectedAddModel(path = "")) // None
         backgroundImageList.add(SelectedAddModel(path = "")) // Pick from gallery
+        backgroundImageList.add(SelectedAddModel(path = "")) // None
         backgroundImageList.addAll(backgrounds.map { SelectedAddModel(path = it) })
 
         // Khi category đã có dữ liệu, luôn hiển thị danh sách của title
@@ -107,7 +107,6 @@ class AddCharacterViewModel @Inject constructor(
             ?.let(::selectBackgroundCategory)
 
         backgroundColorList.clear()
-        backgroundColorList.add(SelectedAddModel()) // None
         backgroundColorList.add(SelectedAddModel()) // Choose custom color
         backgroundColorList.addAll(DataLocal.getBackgroundColorDefault(context))
 
@@ -139,11 +138,11 @@ class AddCharacterViewModel @Inject constructor(
         backgroundImageList = arrayListOf(
             SelectedAddModel(
                 path = "",
-                isSelected = selectedBackgroundImagePosition == NONE_BACKGROUND_POSITION
+                isSelected = selectedBackgroundImagePosition == ADD_BACKGROUND_POSITION
             ),
             SelectedAddModel(
                 path = "",
-                isSelected = selectedBackgroundImagePosition == ADD_BACKGROUND_POSITION
+                isSelected = selectedBackgroundImagePosition == NONE_BACKGROUND_POSITION
             )
         ).apply {
             addAll(categories.flatMap { it.imageUrls() }.map {
@@ -169,11 +168,11 @@ class AddCharacterViewModel @Inject constructor(
         backgroundImageList = arrayListOf(
             SelectedAddModel(
                 path = "",
-                isSelected = selectedBackgroundImagePosition == NONE_BACKGROUND_POSITION
+                isSelected = selectedBackgroundImagePosition == ADD_BACKGROUND_POSITION
             ),
             SelectedAddModel(
                 path = "",
-                isSelected = selectedBackgroundImagePosition == ADD_BACKGROUND_POSITION
+                isSelected = selectedBackgroundImagePosition == NONE_BACKGROUND_POSITION
             )
         ).apply {
             addAll(urls.map {
@@ -234,8 +233,8 @@ class AddCharacterViewModel @Inject constructor(
             backgroundSelectionByCategory[category] = position
             backgroundPathByCategory[category] = selectedBackgroundImagePath
         }
-        backgroundColorList.forEachIndexed { index, model ->
-            model.isSelected = position == NONE_BACKGROUND_POSITION && index == NONE_BACKGROUND_POSITION
+        backgroundColorList.forEach { model ->
+            model.isSelected = false
         }
         backgroundImageList.forEachIndexed { index, model ->
             model.isSelected = index == position
@@ -243,18 +242,12 @@ class AddCharacterViewModel @Inject constructor(
     }
 
     fun updateBackgroundColorSelected(position: Int) {
-        selectedBackgroundImagePosition =
-            if (position == NONE_BACKGROUND_POSITION) NONE_BACKGROUND_POSITION else -1
+        selectedBackgroundImagePosition = -1
         selectedBackgroundImagePath = null
         backgroundSelectionByCategory.clear()
         backgroundPathByCategory.clear()
-        if (position == NONE_BACKGROUND_POSITION) {
-            backgroundCategoryList.forEach {
-                backgroundSelectionByCategory[it.category] = NONE_BACKGROUND_POSITION
-            }
-        }
-        backgroundImageList.forEachIndexed { index, model ->
-            model.isSelected = position == NONE_BACKGROUND_POSITION && index == NONE_BACKGROUND_POSITION
+        backgroundImageList.forEach { model ->
+            model.isSelected = false
         }
         backgroundColorList.forEachIndexed { index, model ->
             model.isSelected = index == position
@@ -262,8 +255,8 @@ class AddCharacterViewModel @Inject constructor(
     }
 
     private companion object {
-        const val NONE_BACKGROUND_POSITION = 0
-        const val ADD_BACKGROUND_POSITION = 1
+        const val ADD_BACKGROUND_POSITION = 0
+        const val NONE_BACKGROUND_POSITION = 1
     }
 
     fun updateTextFontSelected(position: Int) {

@@ -67,8 +67,7 @@ class ColorAdapter : BaseAdapter<ColorModel, ItemColorBinding>(ItemColorBinding:
         val isWhite = item.color.removePrefix("#").equals("FFFFFF", ignoreCase = true)
         val isSelected = posColor == position
 
-        binding.colorSelected.isVisible = !isSelected && !isWhite
-        binding.colorSelectedWhite.isVisible = !isSelected && isWhite
+        binding.colorSelected.isVisible = isSelected
 
         val colorInt = runCatching {
             Color.parseColor("#${item.color.removePrefix("#").ifEmpty { "FFFFFF" }}")

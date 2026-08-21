@@ -35,6 +35,8 @@ import java.net.URL
 import java.util.Collections
 import java.util.UUID
 import javax.inject.Inject
+import kotlin.text.isEmpty
+import kotlin.text.orEmpty
 
 @HiltViewModel
 class ViewModelActivity @Inject constructor(
@@ -100,7 +102,7 @@ class ViewModelActivity @Inject constructor(
 
 
     private suspend fun loadUrlList(baseUrl: String, ext: String): List<String> {
-        val results = Collections.synchronizedMap(mutableMapOf<Int, String>())
+        val results = java.util.Collections.synchronizedMap(mutableMapOf<Int, String>())
         var shouldStop = false
         var start = 1
 
@@ -112,7 +114,7 @@ class ViewModelActivity @Inject constructor(
                         if (shouldStop) return@async
                         val url = "$baseUrl$i.$ext"
                         try {
-                            val connection = URL(url).openConnection() as HttpURLConnection
+                            val connection = java.net.URL(url).openConnection() as java.net.HttpURLConnection
                             connection.requestMethod = "HEAD"
                             connection.connectTimeout = 5000
                             connection.readTimeout = 5000
@@ -133,11 +135,11 @@ class ViewModelActivity @Inject constructor(
 
     private data class BgConfig(
         @SerializedName("background")
-        val background: CategoryConfig? = null,
+        val background: List<CategoryConfig> = emptyList(),
         @SerializedName("sticker")
-        val sticker: CategoryConfig? = null,
+        val sticker: List<CategoryConfig> = emptyList(),
         @SerializedName("speech bubble")
-        val speechBubble: CategoryConfig? = null
+        val speechBubble: List<CategoryConfig> = emptyList()
     )
 
     private data class CategoryConfig(
@@ -148,8 +150,8 @@ class ViewModelActivity @Inject constructor(
     )
 
     private fun loadBgConfig(): BgConfig {
-        val url = "https://lvtglobal.tech/public/app/ST287_AvatarMakerHighSchoolOC/bg/bg.json"
-        val connection = URL(url).openConnection() as HttpURLConnection
+        val url = "https://lvtglobal.tech/public/app/ST281_FoodMaker/bg/bg.json"
+        val connection = java.net.URL(url).openConnection() as java.net.HttpURLConnection
         return try {
             connection.connectTimeout = 10_000
             connection.readTimeout = 10_000
@@ -176,17 +178,35 @@ class ViewModelActivity @Inject constructor(
             try {
                 coroutineScope {
                     val config = loadBgConfig()
-                    // bg.json contains one object per asset type, not category arrays.
-                    // An empty category means files live directly in the type folder.
-                    val bgs = config.background?.let { item ->
-                        directImageUrls("background", item.quantity)
-                    }.orEmpty()
-                    val stickers = config.sticker?.let { item ->
-                        directImageUrls("sticker", item.quantity)
-                    }.orEmpty()
-                    val speech = config.speechBubble?.let { item ->
-                        directImageUrls("speech%20bubble", item.quantity)
-                    }.orEmpty()
+                    val categories = config.background
+                        .filter { it.category.isNotBlank() && it.quantity > 0 }
+                        .mapIndexed { index, item ->
+                            BackgroundCategoryModel(
+                                category = item.category,
+                                quantity = item.quantity,
+                                isSelected = index == 0
+                            )
+                        }
+                    val bgs = categories.firstOrNull()?.imageUrls().orEmpty()
+                    val stickerCategories = config.sticker
+                        .filter { it.category.isNotBlank() && it.quantity > 0 }
+                        .mapIndexed { index, item ->
+                            StickerCategoryModel(
+                                category = item.category,
+                                quantity = item.quantity,
+                                isSelected = index == 0
+                            )
+                        }
+                    val stickers = stickerCategories.firstOrNull()?.imageUrls().orEmpty()
+                    val speechCategories = config.speechBubble
+                        .filter { it.category.isNotBlank() && it.quantity > 0 }
+                        .map { item ->
+                            SpeechCategoryModel(
+                                category = item.category,
+                                quantity = item.quantity
+                            )
+                        }
+                    val speech = speechCategories.flatMap { it.imageUrls() }
 
                     if (bgs.isEmpty() && stickers.isEmpty() && speech.isEmpty()) {
                         Log.w("ViewModelActivity", "⚠️ Empty result, mark as failed")
@@ -195,9 +215,9 @@ class ViewModelActivity @Inject constructor(
                     }
 
                     appDataManager.updateBackgroundsStickersAndSpeech(bgs, stickers, speech)
-                    _backgroundCategories.value = emptyList()
-                    _stickerCategories.value = emptyList()
-                    _speechCategories.value = emptyList()
+                    _backgroundCategories.value = categories
+                    _stickerCategories.value = stickerCategories
+                    _speechCategories.value = speechCategories
                     _bgStickerFailed.value = false
                     _bgStickerReady.value = true
                     Log.d("ViewModelActivity", "✅ bgs=${bgs.size} stickers=${stickers.size}")
@@ -209,12 +229,6 @@ class ViewModelActivity @Inject constructor(
                 _bgLoading.value = false
             }
         }
-    }
-
-    private fun directImageUrls(folder: String, quantity: Int): List<String> {
-        if (quantity <= 0) return emptyList()
-        val baseUrl = "https://lvtglobal.tech/public/app/ST287_AvatarMakerHighSchoolOC/bg"
-        return (1..quantity).map { index -> "$baseUrl/$folder/$index.png" }
     }
     private fun loadInitialData() {
         viewModelScope.launch {
@@ -366,7 +380,7 @@ class ViewModelActivity @Inject constructor(
     // ── CRUD ──────────────────────────────────────────────────────────────────
 
     fun saveCharacterWithSelections(
-        character: CustomModel,
+        character:  CustomModel,
         selections: List<SelectionIndex>,
         imageSave:  String  = "",
         isFlipped:  Boolean = false

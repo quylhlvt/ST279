@@ -11,8 +11,7 @@
     app:layout_constraintStart_toStartOf="parent"
     android:layout_height="match_parent"
     android:id="@+id/frame_tittle"
-    android:background="@drawable/bg_8_title_unselect"
-    app:layout_constraintDimensionRatio="9.6:2.8">
+    app:layout_constraintDimensionRatio="9:3.6">
     <TextView
         android:id="@+id/txtTittle"
         android:layout_width="match_parent"
@@ -20,8 +19,9 @@
         android:text="@string/next"
         android:layout_gravity="center"
         android:gravity="center"
+        android:paddingBottom="@dimen/dimension_3"
         app:outerStrokeWidth="@dimen/dimension_0"
-        android:fontFamily="@font/londrina_solid_regular"
+        android:fontFamily="@font/pacifico_regular"
         android:textSize="@dimen/text_size_16"
         android:textColor="@color/white"/>
 </FrameLayout>

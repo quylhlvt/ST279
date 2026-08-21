@@ -17,6 +17,7 @@ import android.view.WindowManager
 import android.view.inputmethod.EditorInfo
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.doOnPreDraw
@@ -63,6 +64,7 @@ import com.ava.ui.onboarding.permission.PermissionViewModel
 import com.ava.utils.DataLocal
 import com.ava.utils.key.ValueKey
 import com.ava.databinding.FragmentAddCharacterBinding
+import com.ava.ui.main.add_character.adapter.SpeechCategoryAdapter
 import com.bumptech.glide.load.DecodeFormat
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
@@ -79,6 +81,7 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 import javax.inject.Inject
+import kotlin.compareTo
 
 @AndroidEntryPoint
 class AddCharacterFragment : BaseFragment<FragmentAddCharacterBinding, AddCharacterViewModel>(
@@ -89,6 +92,7 @@ class AddCharacterFragment : BaseFragment<FragmentAddCharacterBinding, AddCharac
     lateinit var imageManager: CharacterImageManager
     private val permissionViewModel: PermissionViewModel by viewModels()
     private var keyboardLayoutListener: ViewTreeObserver.OnGlobalLayoutListener? = null
+
     // ── Keyboard state ──────────────────────────────────────────────────────
     // Source of truth duy nhất: layout change listener đo thực tế
     // KHÔNG dùng boolean flag nào trong ViewModel để control layout
@@ -98,6 +102,7 @@ class AddCharacterFragment : BaseFragment<FragmentAddCharacterBinding, AddCharac
     private val backgroundImageAdapter by lazy { BackgroundImageAdapter() }
     private val backgroundCategoryAdapter by lazy { BackgroundCategoryAdapter() }
     private val stickerCategoryAdapter by lazy { StickerCategoryAdapter() }
+    private val speechCategoryAdapter by lazy { SpeechCategoryAdapter() }
     private val backgroundColorAdapter by lazy { BackgroundColorAdapter() }
     private val stickerAdapter by lazy { StickerAdapter() }
     private val speechAdapter by lazy { SpeechAdapter() }
@@ -111,21 +116,21 @@ class AddCharacterFragment : BaseFragment<FragmentAddCharacterBinding, AddCharac
     private fun buttonNavigationList() = arrayListOf(
         binding.btnBackground,
         binding.btnSticker,
-//        binding.btnSpeech,
+        binding.btnSpeech,
         binding.btnText,
     )
 
     private fun imageNavigationList() = arrayListOf(
         binding.imgBackground,
         binding.imgSticker,
-//        binding.imgSpeech,
+        binding.imgSpeech,
         binding.imgText,
     )
 
     private fun layoutNavigationList() = arrayListOf(
         binding.lnlBackground.root,
         binding.lnlSticker,
-//        binding.lnlSpeech.root,
+        binding.lnlSpeech,
         binding.lnlText.scvText,
     )
 
@@ -167,6 +172,7 @@ class AddCharacterFragment : BaseFragment<FragmentAddCharacterBinding, AddCharac
         if (!isAdded || isDetached) return
 
     }
+
     // ── Observe ───────────────────────────────────────────────────────────────
     override fun observeData() {
         viewLifecycleOwner.lifecycleScope.launch {
@@ -214,6 +220,7 @@ class AddCharacterFragment : BaseFragment<FragmentAddCharacterBinding, AddCharac
                             viewModel.setSpeechCategories(categories)
                             val selected = viewModel.speechCategoryList.indexOfFirst { it.isSelected }
                             if (selected >= 0) viewModel.selectSpeechCategory(selected)
+                            speechCategoryAdapter.submitList(viewModel.speechCategoryList)
                             speechAdapter.submitList(viewModel.speechList)
                         }
                     }
@@ -265,11 +272,11 @@ class AddCharacterFragment : BaseFragment<FragmentAddCharacterBinding, AddCharac
                 viewModel.isTextTabActive = false
                 viewModel.setTypeNavigation(ValueKey.STICKER_NAVIGATION)
             }
-//            btnSpeech.onClick {
-//                clearFocus()
-//                viewModel.isTextTabActive = false
-//                viewModel.setTypeNavigation(ValueKey.SPEECH_NAVIGATION)
-//            }
+            btnSpeech.onClick {
+                clearFocus()
+                viewModel.isTextTabActive = false
+                viewModel.setTypeNavigation(ValueKey.SPEECH_NAVIGATION)
+            }
             btnText.onClick {
                 viewModel.isTextTabActive = true
                 viewModel.setTypeNavigation(ValueKey.TEXT_NAVIGATION)
@@ -284,11 +291,9 @@ class AddCharacterFragment : BaseFragment<FragmentAddCharacterBinding, AddCharac
                 override fun afterTextChanged(s: Editable?) {}
             })
 
-            lnlText.edtText.setOnEditorActionListener { view, actionId, _ ->
+            lnlText.edtText.setOnEditorActionListener { _, actionId, _ ->
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
-                    //                    handleDoneText()
-                    hideSoftKeyboard()
-                    view.clearFocus()
+                    clearFocus()
                     true
                 } else false
             }
@@ -322,7 +327,6 @@ class AddCharacterFragment : BaseFragment<FragmentAddCharacterBinding, AddCharac
                 }
             }
             backgroundColorAdapter.onChooseColorClick = { handleChooseColor() }
-            backgroundColorAdapter.onNoneColorClick = { handleRemoveBackground(fromColorTab = true) }
             backgroundColorAdapter.onBackgroundColorClick = { color, position ->
                 handleSetBackgroundColor(color, position)
             }
@@ -336,7 +340,13 @@ class AddCharacterFragment : BaseFragment<FragmentAddCharacterBinding, AddCharac
                 stickerAdapter.submitList(viewModel.stickerList)
                 rcvSticker.scrollToPosition(0)
             }
-
+            speechCategoryAdapter.onCategoryClick = { _, position ->
+                viewModel.selectSpeechCategory(position)
+                speechCategoryAdapter.submitList(viewModel.speechCategoryList)
+                speechAdapter.currentSelected = -1
+                speechAdapter.submitList(viewModel.speechList)
+                rcvSpeech.scrollToPosition(0)
+            }
             speechAdapter.onItemClick = { path ->
                 if (checkNetworkBeforeRemoteAsset(path)) handleSpeech(path)
             }
@@ -435,9 +445,9 @@ class AddCharacterFragment : BaseFragment<FragmentAddCharacterBinding, AddCharac
         if (viewModel.isTextTabActive && !viewModel.isSpeechDialogOpen) {
             binding.flFunction.translationY = (-170).dp(requireContext()).toFloat()
             binding.lnlBottom.translationY = (-170).dp(requireContext()).toFloat()
-            binding.view3.translationY = (-170).dp(requireContext()).toFloat()
         }
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
         keyboardLayoutListener?.let {
@@ -445,23 +455,25 @@ class AddCharacterFragment : BaseFragment<FragmentAddCharacterBinding, AddCharac
         }
         keyboardLayoutListener = null
     }
+
     private fun onKeyboardClose() {
         // ✅ Android 9-: ignore nếu speech dialog đang mở
         // vì GlobalLayoutListener fire false-close khi dialog transition
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q
-            && viewModel.isSpeechDialogOpen) return
+            && viewModel.isSpeechDialogOpen
+        ) return
 
         isKeyboardOpen = false
         binding.lnlBottom.translationY = 0f
         binding.flFunction.translationY = 0f
-        binding.view3.translationY = 0f
     }
+
     // ĐỔI TÊN + ĐỔI bottomMargin → topMargin
     private fun setFlFunctionTopMargin(margin: Int) {
         (binding.flFunction.layoutParams as ViewGroup.MarginLayoutParams).topMargin = margin
         (binding.lnlBottom.layoutParams as ViewGroup.MarginLayoutParams).topMargin = margin
-        (binding.view3.layoutParams as ViewGroup.MarginLayoutParams).topMargin = margin
     }
+
     /**
      * Đóng keyboard và reset view.
      * Dùng ở mọi nơi cần dismiss keyboard — backpress, click ngoài, done text, tab switch.
@@ -473,9 +485,10 @@ class AddCharacterFragment : BaseFragment<FragmentAddCharacterBinding, AddCharac
         // Reset view ngay lập tức, không đợi layout change
         setFlFunctionTopMargin(0)
     }
-    private fun clearFocus( check: Boolean =false) {
+
+    private fun clearFocus(check: Boolean = false) {
         if (!check)
-        binding.drawView.hideSelect()
+            binding.drawView.hideSelect()
         hideSoftKeyboard()
         setFlFunctionTopMargin(0)
         lifecycleScope.launch {
@@ -483,6 +496,7 @@ class AddCharacterFragment : BaseFragment<FragmentAddCharacterBinding, AddCharac
             binding.lnlText.edtText.clearFocus()
         }
     }
+
     // ── Data ──────────────────────────────────────────────────────────────────
     private fun initActionBar() {
         binding.actionBar.apply {
@@ -498,13 +512,13 @@ class AddCharacterFragment : BaseFragment<FragmentAddCharacterBinding, AddCharac
                 adapter = backgroundImageAdapter; itemAnimator = null
                 setHasFixedSize(true); setItemViewCacheSize(10)
             }
-//            lnlBackground.rcvtTittle.apply {
-//                adapter = backgroundCategoryAdapter
-//                itemAnimator = null
-//                layoutManager = LinearLayoutManager(
-//                    requireContext(), LinearLayoutManager.HORIZONTAL, false
-//                )
-//            }
+            lnlBackground.rcvtTittle.apply {
+                adapter = backgroundCategoryAdapter
+                itemAnimator = null
+                layoutManager = LinearLayoutManager(
+                    requireContext(), LinearLayoutManager.HORIZONTAL, false
+                )
+            }
             lnlBackground.rcvBackgroundColor.apply {
                 adapter = backgroundColorAdapter; itemAnimator = null
             }
@@ -519,8 +533,14 @@ class AddCharacterFragment : BaseFragment<FragmentAddCharacterBinding, AddCharac
                     requireContext(), LinearLayoutManager.HORIZONTAL, false
                 )
             }
-
-            lnlSpeech.rcvSpeech.apply {
+            rcvSpeechTittle.apply {
+                adapter = speechCategoryAdapter
+                itemAnimator = null
+                layoutManager = LinearLayoutManager(
+                    requireContext(), LinearLayoutManager.HORIZONTAL, false
+                )
+            }
+            rcvSpeech.apply {
                 adapter = speechAdapter; itemAnimator = null
                 setHasFixedSize(true); setItemViewCacheSize(10)
             }
@@ -549,8 +569,8 @@ class AddCharacterFragment : BaseFragment<FragmentAddCharacterBinding, AddCharac
                 viewModelActivity.stickers.value,
                 viewModelActivity.speechs.value
             )
-            // Màn hình mới chưa có background: hiển thị None được chọn ở cả
-            // danh sách ảnh và màu ngay từ lần render đầu tiên.
+            // Màn hình mới chưa có background: chọn None trong danh sách ảnh.
+            // Tab màu không còn mục None nên không chọn item nào ở đó.
             if (viewModel.selectedBackgroundImagePosition < 0 &&
                 viewModel.selectedBackgroundImagePath == null &&
                 viewModel.savedBackgroundColor == null
@@ -601,6 +621,7 @@ class AddCharacterFragment : BaseFragment<FragmentAddCharacterBinding, AddCharac
         backgroundImageAdapter.submitList(viewModel.backgroundImageList)
         backgroundCategoryAdapter.submitList(viewModel.backgroundCategoryList)
         stickerCategoryAdapter.submitList(viewModel.stickerCategoryList)
+        speechCategoryAdapter.submitList(viewModel.speechCategoryList)
         backgroundColorAdapter.submitList(viewModel.backgroundColorList, true)
         stickerAdapter.submitList(viewModel.stickerList, true)
         speechAdapter.submitList(viewModel.speechList)
@@ -632,6 +653,7 @@ class AddCharacterFragment : BaseFragment<FragmentAddCharacterBinding, AddCharac
                 binding.imvBackground.setBackgroundColor(requireContext().getColor(R.color.transparent))
                 loadImage(requireContext(), imagePath, binding.imvBackground)
             }
+
             savedColor != null -> {
                 binding.imvBackground.setImageBitmap(null)
                 binding.imvBackground.setBackgroundColor(savedColor)
@@ -722,6 +744,7 @@ class AddCharacterFragment : BaseFragment<FragmentAddCharacterBinding, AddCharac
                     requireActivity().hideNavigation(true)
                     onDone?.invoke()
                 }
+
                 override fun onLoadCleared(placeholder: Drawable?) {}
                 override fun onLoadFailed(errorDrawable: Drawable?) {
                     showToast("Don't Download sticker")
@@ -735,15 +758,18 @@ class AddCharacterFragment : BaseFragment<FragmentAddCharacterBinding, AddCharac
         binding.apply {
             val isImageSelected = type == ValueKey.IMAGE_BACKGROUND
 
-            lnlBackground.btnBackgroundImage.setCardBackgroundColor(
-                requireContext().getColor(
-                    if (isImageSelected) R.color.app_color2 else R.color.gray1
-                )
+            lnlBackground.btnBackgroundImage.setBackgroundResource(
+                if (isImageSelected) R.drawable.frame_select_add else 0
             )
-            lnlBackground.btnBackgroundColor.setCardBackgroundColor(
-                requireContext().getColor(
-                    if (isImageSelected) R.color.gray1 else R.color.app_color2
-                )
+
+            lnlBackground.btnBackgroundColor.setBackgroundResource(
+                if (isImageSelected)0 else R.drawable.frame_select_add
+            )
+            lnlBackground.btnBackgroundImageTv.setTextColor(
+                ContextCompat.getColor(requireContext(), if (isImageSelected) R.color.app_color else R.color.white)
+            )
+            lnlBackground.btnBackgroundColorTv.setTextColor(
+                ContextCompat.getColor(requireContext(), if (!isImageSelected) R.color.app_color else R.color.white)
             )
             lnlBackground.btnBackgroundImageTv.isSelected = isImageSelected
             lnlBackground.btnBackgroundColorTv.isSelected = !isImageSelected
@@ -751,28 +777,34 @@ class AddCharacterFragment : BaseFragment<FragmentAddCharacterBinding, AddCharac
             when (type) {
                 ValueKey.IMAGE_BACKGROUND -> {
                     lnlBackground.rcvBackgroundColor.gone()
-                    lnlBackground.rcvBackgroundImage.visible()
+                    lnlBackground.tabImage.visible()
                 }
+
                 ValueKey.COLOR_BACKGROUND -> {
                     lnlBackground.rcvBackgroundColor.visible()
-                    lnlBackground.rcvBackgroundImage.gone()
+                    lnlBackground.tabImage.gone()
                 }
             }
         }
     }
 
     private fun setupTypeNavigation(type: Int) {
-        buttonNavigationList().forEachIndexed { index, button ->
+        val buttons = buttonNavigationList()
+        val images = imageNavigationList()
+        val layouts = layoutNavigationList()
+
+        buttons.forEachIndexed { index, _ ->
             val isSelected = index == type
             val iconRes = if (isSelected) {
-                DataLocal.bottomNavigationSelected[index]
+                DataLocal.bottomNavigationSelected.getOrNull(index)
+
             } else {
-                DataLocal.bottomNavigationNotSelect[index]
+                DataLocal.bottomNavigationNotSelect.getOrNull(index)
             }
-
-
-            imageNavigationList()[index].setImageResource(iconRes)
-            layoutNavigationList()[index].isVisible = isSelected
+            val bgIcon = if (isSelected) R.drawable.bg_selected_add else R.drawable.bg_unselected_add
+            buttons.getOrNull(index)?.setBackgroundResource(bgIcon)
+            iconRes?.let { images.getOrNull(index)?.setImageResource(it) }
+            layouts.getOrNull(index)?.isVisible = isSelected
         }
     }
 
@@ -823,7 +855,8 @@ class AddCharacterFragment : BaseFragment<FragmentAddCharacterBinding, AddCharac
                 backgroundImageAdapter.submitList(viewModel.backgroundImageList)
                 backgroundImageAdapter.clearSelection()
                 backgroundImageAdapter.selectItem(NONE_BACKGROUND_POSITION)
-                backgroundColorAdapter.selectItem(NONE_BACKGROUND_POSITION)
+                backgroundColorAdapter.submitList(viewModel.backgroundColorList)
+                backgroundColorAdapter.clearSelection()
                 hideLoadingSafe()
 
                 // ✅ Ưu tiên bitmap đã cache, fallback về imagepath
@@ -843,7 +876,7 @@ class AddCharacterFragment : BaseFragment<FragmentAddCharacterBinding, AddCharac
 
     private fun handleSetBackgroundImage(path: String, position: Int) {
         viewModel.setBackgroundImage(path)
-        viewModel.selectedBackgroundImagePath = path.takeIf { position >= NONE_BACKGROUND_POSITION }
+        viewModel.selectedBackgroundImagePath = path
         viewModel.savedBackgroundColor = null
         binding.imvBackground.setBackgroundColor(requireContext().getColor(R.color.transparent))
         loadImage(requireContext(), path, binding.imvBackground)
@@ -864,7 +897,7 @@ class AddCharacterFragment : BaseFragment<FragmentAddCharacterBinding, AddCharac
         backgroundColorAdapter.selectItem(position)
     }
 
-    private fun handleRemoveBackground(fromColorTab: Boolean = false) {
+    private fun handleRemoveBackground() {
         viewModel.setBackgroundImage(null)
         viewModel.selectedBackgroundImagePath = null
         viewModel.selectedBackgroundImagePosition = NONE_BACKGROUND_POSITION
@@ -875,13 +908,9 @@ class AddCharacterFragment : BaseFragment<FragmentAddCharacterBinding, AddCharac
             requireContext().getColor(R.color.transparent)
         )
 
-        if (fromColorTab) {
-            viewModel.updateBackgroundColorSelected(NONE_BACKGROUND_POSITION)
-        } else {
-            viewModel.updateBackgroundImageSelected(NONE_BACKGROUND_POSITION)
-        }
+        viewModel.updateBackgroundImageSelected(NONE_BACKGROUND_POSITION)
         backgroundImageAdapter.selectItem(NONE_BACKGROUND_POSITION)
-        backgroundColorAdapter.selectItem(NONE_BACKGROUND_POSITION)
+        backgroundColorAdapter.clearSelection()
     }
 
 
@@ -895,8 +924,9 @@ class AddCharacterFragment : BaseFragment<FragmentAddCharacterBinding, AddCharac
     }
 
     private companion object {
-        const val NONE_BACKGROUND_POSITION = 0
-        const val ADD_BACKGROUND_POSITION = 1
+        const val ADD_BACKGROUND_POSITION = 0
+        const val NONE_BACKGROUND_POSITION = 1
+        const val CUSTOM_BACKGROUND_COLOR_POSITION = 0
     }
 
     private fun handleChooseColor(isTextColor: Boolean = false) {
@@ -907,18 +937,11 @@ class AddCharacterFragment : BaseFragment<FragmentAddCharacterBinding, AddCharac
             dialog.dismiss()
             when {
                 isTextColor -> handleTextColorClick(color, 0)
-                else -> handleSetBackgroundColor(color, ADD_BACKGROUND_POSITION)
+                else -> handleSetBackgroundColor(color, CUSTOM_BACKGROUND_COLOR_POSITION)
             }
         }
     }
 
-    /**
-     * Speech dialog có EditText riêng với keyboard riêng.
-     * flFunction KHÔNG được đẩy lên khi keyboard của dialog mở.
-     *
-     * Giải pháp: set isSpeechDialogOpen = true TRƯỚC KHI dialog show.
-     * Layout change listener sẽ check flag này và bỏ qua keyboard event.
-     */
     private fun handleSpeech(path: String) {
         viewModel.isSpeechDialogOpen = true
         binding.lnlText.edtText.clearFocus()
@@ -1005,7 +1028,8 @@ class AddCharacterFragment : BaseFragment<FragmentAddCharacterBinding, AddCharac
             showLoadingSafe()
             try {
                 val bitmap = binding.flSave.drawToBitmap()
-                val timestamp = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(Date())
+                val timestamp =
+                    SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(Date())
                 val designId = "design_$timestamp"
 
                 val savedImagePath = withContext(Dispatchers.IO) {

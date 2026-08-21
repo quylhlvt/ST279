@@ -57,7 +57,7 @@
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dimension_10"
+        android:layout_marginBottom="@dimen/dimension_30"
         android:scrollbars="none"
         app:layout_constraintBottom_toTopOf="@+id/tvContinue">
 
@@ -153,7 +153,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/dimension_12"
-        android:layout_marginBottom="@dimen/dimension_180"
+        android:layout_marginBottom="@dimen/dimension_200"
         android:gravity="center"
         android:fontFamily="@font/pacifico_regular"
         android:text="@string/continue_per"

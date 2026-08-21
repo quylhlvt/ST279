@@ -3,10 +3,12 @@ package com.ava.ui.main.cosplay
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.os.Bundle
+import android.text.SpannableString
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.activity.OnBackPressedCallback
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
@@ -24,6 +26,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.ava.R
 import com.ava.core.extention.InternetExtension.isInternetAvailable
 import com.ava.core.extention.InternetExtension.isNetworkConnected
+import com.ava.core.extention.changeText
 import com.ava.databinding.FragmentCosplayBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
@@ -81,20 +84,41 @@ class CosplayFragment : BaseFragment<FragmentCosplayBinding, CosplayViewModel>(
         if (!isAdded || isDetached) return
 
     }
+    override fun setupPreViews() {
+        super.setupPreViews()
+        Glide.with(binding.imageGif).asGif().load(R.drawable.gif).into(binding.imageGif)
+    }
     override fun initView() {
-        Glide.with(binding.imageGif).load(R.drawable.gif).into(binding.imageGif)
         binding.imvImage.gone()
-        binding.progressLoading.gone()
         binding.imageGif.visible()
         binding.setupActionBar()
         setShowButtonEnabled(false)
         binding.txtRandom.isSelected = true
         binding.txtShow.isSelected = true
+        val space = SpannableString(" ")
+        val parts = listOf(
+            changeText(requireContext(), getString(R.string.tvCosplay1), R.color.app_color2, R.font.pacifico_regular),
+            space,
+            changeText(requireContext(), getString(R.string.tvCosplay2), R.color.app_color2, R.font.pacifico_regular),
+            space,
+            changeText(requireContext(), getString(R.string.tvCosplay3), R.color.app_color2, R.font.pacifico_regular),
+            space,
+            changeText(requireContext(), getString(R.string.tvCosplay4), R.color.app_color2, R.font.pacifico_regular),
+            space,
+            changeText(requireContext(), getString(R.string.tvCosplay5), R.color.app_color2, R.font.pacifico_regular),
+            space,
+            changeText(requireContext(), getString(R.string.tvCosplay6), R.color.app_color2, R.font.pacifico_regular),
+            space,
+            changeText(requireContext(), getString(R.string.tvCosplay7), R.color.app_color2, R.font.pacifico_regular),
+            space,
+            changeText(requireContext(), getString(R.string.tvCosplay8), R.color.app_color2, R.font.pacifico_regular),
+        )
 
+        // ✅ Dùng SpannableStringBuilder thay vì TextUtils.concat
+        val builder = android.text.SpannableStringBuilder()
+        parts.forEach { builder.append(it) }
 
-
-
-
+        binding.txtGuile.setText(builder, TextView.BufferType.SPANNABLE)
         // Chỉ randomize lần đầu, nếu chưa có item nào
 //        if (viewModel.randomItem.value == null) {
 //            viewModel.randomize()
@@ -105,6 +129,7 @@ class CosplayFragment : BaseFragment<FragmentCosplayBinding, CosplayViewModel>(
         actionBar.apply {
             tvCenter.select()
             setImageActionBar(btnActionBarLeft, R.drawable.back_app)
+            setImageActionBar(btnActionBarRight, R.drawable.guid)
         }
     }
 
@@ -123,7 +148,12 @@ class CosplayFragment : BaseFragment<FragmentCosplayBinding, CosplayViewModel>(
                 viewModel.randomize(isOnline = isOnline)
             }
 
-
+            actionBar.btnActionBarRight.onClick {
+                showGuide.visible()
+            }
+            closeGuide.onClick {
+                showGuide.gone()
+            }
             show.onClick {
                 if (!show.isEnabled) return@onClick
                 val item = viewModel.randomItem.value ?: return@onClick
@@ -149,10 +179,19 @@ class CosplayFragment : BaseFragment<FragmentCosplayBinding, CosplayViewModel>(
 
     override fun observeData() {
         viewLifecycleOwner.lifecycleScope.launch {
+            viewModel.isDataReady.collect { ready ->
+                if (ready && viewModel.randomItem.value == null) {
+                    val isOnline =
+                        isNetworkConnected(requireContext()) && isInternetAvailable(requireContext())
+                    viewModel.randomize(isOnline = isOnline)
+                }
+            }
+        }
+        viewLifecycleOwner.lifecycleScope.launch {
             viewModel.randomItem.collectLatest { item ->
                 item ?: return@collectLatest
 
-                // Nếu đã có cache bitmap thì không render lại
+                // ✅ Nếu đã có cache bitmap thì không render lại
                 val cached = viewModel.cachedBitmap
                 if (cached != null && !cached.isRecycled) {
                     showBitmap(cached)
@@ -236,8 +275,7 @@ class CosplayFragment : BaseFragment<FragmentCosplayBinding, CosplayViewModel>(
             setImageDrawable(null)
             gone()
         }
-        binding.imageGif.gone()
-        binding.progressLoading.visible()
+        binding.imageGif.visible()
         setShowButtonEnabled(false)
     }
 
@@ -248,7 +286,6 @@ class CosplayFragment : BaseFragment<FragmentCosplayBinding, CosplayViewModel>(
             visible()
         }
         binding.imageGif.gone()
-        binding.progressLoading.gone()
         setShowButtonEnabled(true)
     }
 
@@ -256,6 +293,9 @@ class CosplayFragment : BaseFragment<FragmentCosplayBinding, CosplayViewModel>(
         binding.show.isEnabled = enabled
         binding.show.isClickable = enabled
         binding.show.alpha = if (enabled) 1f else 0.5f
+        binding.random.isEnabled = enabled
+        binding.random.isClickable = enabled
+        binding.random.alpha = if (enabled) 1f else 0.5f
     }
 
     private fun mergeBitmaps(bitmaps: List<Bitmap>): Bitmap {
