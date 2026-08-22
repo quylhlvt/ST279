@@ -1,10 +1,14 @@
 package com.ava.ui.main.successcosplay
 
+import android.animation.ValueAnimator
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.DecelerateInterpolator
 import androidx.activity.OnBackPressedCallback
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.updateLayoutParams
 import androidx.hilt.navigation.HiltViewModelFactory
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -15,12 +19,14 @@ import com.ava.core.extention.select
 import com.ava.core.extention.setImageActionBar
 import com.ava.ui.main.cosplay.CosplayViewModel
 import com.ava.R
+import com.ava.core.extention.setTextActionBar
 import com.ava.databinding.FragmentSuccessCosplayBinding
 import dagger.hilt.android.AndroidEntryPoint
+import kotlin.math.roundToInt
 
 @AndroidEntryPoint
 class SuccessCosplayFragment : BaseFragment<FragmentSuccessCosplayBinding, SuccessCosplayViewModel>( FragmentSuccessCosplayBinding::inflate, SuccessCosplayViewModel::class.java) {
-
+    private var starAnimator: ValueAnimator? = null
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupBackPressHandler()
@@ -49,12 +55,69 @@ class SuccessCosplayFragment : BaseFragment<FragmentSuccessCosplayBinding, Succe
             setupActionBar()
             val userBitmap = viewModelActivity.userResultBitmap
             if (userBitmap != null && !userBitmap.isRecycled) {
-                imvImage.setImageBitmap(userBitmap)
+                imvImage2.setImageBitmap(userBitmap)
             }
 
-            val matchPercent = viewModelActivity.cosplayPercent.coerceIn(0, 100)
-            percent.text = "$matchPercent%"
+            // imvImage3 = ảnh cosplay gốc
+            val cosplayBitmap = viewModelActivity.cosplayBitmap
+            if (cosplayBitmap != null && !cosplayBitmap.isRecycled) {
+                imvImage3.setImageBitmap(cosplayBitmap)
+            }
+
+            val percent = viewModelActivity.cosplayPercent
+            val starCount = when (percent) {
+                0 -> 0
+                in 1..20 -> 1
+                in 21..40 -> 2
+                in 41..70 -> 3
+                in 71..98 -> 4
+                in 99..100 -> 5
+                else -> 0
+            }
+            binding.ll1.rating = starCount.toFloat()
+            updateProgressBar(percent)
         }
+    }
+    private fun updateProgressBar(percent: Int) {
+        val safePercent = percent.coerceIn(0, 100)
+        val targetBias = safePercent / 100f
+
+        binding.layoutProgress.post {
+            if (!isAdded || isDetached) return@post
+
+            val currentBias =
+                (binding.imgStar.layoutParams as ConstraintLayout.LayoutParams)
+                    .horizontalBias
+                    .coerceIn(0f, 1f)
+
+            starAnimator?.cancel()
+            starAnimator = ValueAnimator.ofFloat(currentBias, targetBias).apply {
+                duration = 400L
+                interpolator = DecelerateInterpolator()
+                addUpdateListener { animator ->
+                    val animatedBias = animator.animatedValue as Float
+
+                    binding.imgStar.updateLayoutParams<ConstraintLayout.LayoutParams> {
+                        horizontalBias = animatedBias
+                    }
+                    binding.tvMatchPercent.updateLayoutParams<ConstraintLayout.LayoutParams> {
+                        endToEnd = ConstraintLayout.LayoutParams.PARENT_ID
+                        horizontalBias = animatedBias
+                    }
+                    val animatedPercent = (animatedBias * 100)
+                        .roundToInt()
+                        .coerceIn(0, safePercent)
+                    binding.tvMatchPercent.text = "$animatedPercent/100"
+                }
+                start()
+            }
+        }
+    }
+
+    override fun onDestroyView() {
+        starAnimator?.cancel()
+        starAnimator = null
+        super.onDestroyView()
     }
     private fun FragmentSuccessCosplayBinding.setupActionBar() {
         actionBar.apply {
@@ -63,6 +126,7 @@ class SuccessCosplayFragment : BaseFragment<FragmentSuccessCosplayBinding, Succe
                 btnActionBarRight,
                 R.drawable.ic_home
             )
+            setTextActionBar(tvCenter, getString(R.string.successful))
         }
     }
 
@@ -75,9 +139,7 @@ class SuccessCosplayFragment : BaseFragment<FragmentSuccessCosplayBinding, Succe
 
     private fun FragmentSuccessCosplayBinding.setupActionBarListeners() {
         actionBar.btnActionBarRight.onClick {
-
                 findNavController().navigate(R.id.action_successCosplay_to_home)
-
         }
     }
 

@@ -40,7 +40,7 @@
     <string name="download">Download</string>
     <string name="my_avatar">My Anime</string>
     <string name="design">My Design</string>
-    <string name="no_item_here">No character here</string>
+    <string name="no_item_here">No item here</string>
     <string name="add_to_whatsapp">Add To WhatsApp</string>
     <string name="add_to_telegram">Add To Telegram</string>
     <string name="share">Share</string>
@@ -80,7 +80,7 @@
     <string name="rate_us_0">You have not rated it yet!</string>
     <string name="have_rated">Thank you for rate our app</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="cosplay">Cosplay</string>
+    <string name="cosplay">Cosplay Anime</string>
     <string name="random">Random</string>
     <string name="my_creation">My Creation</string>
     <string name="category">Category</string>
@@ -131,4 +131,8 @@
     <string name="click_the_random_button_below_to_see_what_your_character_is">Click the random button below to see what your character is!</string>
     <string name="tvCosplay">Players receive a random reference image and must recreate the character by choosing matching hairstyles, outfits, colors, and accessories. Each correct choice increases the percentage score the closer the character matches the image, the higher the final score.</string>
     <string name="font">Font</string>
+    <string name="not_matched">Not Matched</string>
+    <string name="cosplay_complete">Cosplay Complete!</string>
+    <string name="you_lose">You Lose!</string>
+    <string name="victory">Victory</string>
 </resources>

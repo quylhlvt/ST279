@@ -25,6 +25,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.ava.R
 import com.ava.core.extention.InternetExtension.isInternetAvailable
 import com.ava.core.extention.InternetExtension.isNetworkConnected
+import com.ava.core.extention.setTextActionBar
 import com.ava.databinding.FragmentRandomBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
@@ -115,6 +116,7 @@ class RandomFragment : BaseFragment<FragmentRandomBinding, RandomViewModel>(
         actionBar.apply {
             tvCenter.select()
             setImageActionBar(btnActionBarLeft, R.drawable.back_app)
+            setTextActionBar(tvCenter, getString(R.string.random))
         }
     }
 

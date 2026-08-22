@@ -30,7 +30,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="Aa"
-            android:textColor="@color/gray3"
+            android:textColor="#1F1F1F"
             android:textSize="@dimen/text_size_12" />
 
 

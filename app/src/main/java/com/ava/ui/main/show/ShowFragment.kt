@@ -1,5 +1,6 @@
 package com.ava.ui.main.show
 
+import android.animation.ValueAnimator
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.drawable.Drawable
@@ -7,9 +8,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.DecelerateInterpolator
 import android.widget.ImageView
 import androidx.appcompat.widget.AppCompatImageView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
+import androidx.core.view.updateLayoutParams
 import androidx.core.view.isVisible
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
@@ -61,7 +65,8 @@ class ShowFragment : BaseFragment<FragmentShowBinding, ShowViewModel>(
 
     private val pendingLoads = AtomicInteger(0)
     private var timerJob: Job? = null
-    private val totalSeconds = 10 * 60
+    private var starAnimator: ValueAnimator? = null
+    private val totalSeconds = 1 * 10
     private var remainingSeconds = totalSeconds
 
     private var remainingSecondsOnPause: Int = totalSeconds
@@ -112,6 +117,8 @@ class ShowFragment : BaseFragment<FragmentShowBinding, ShowViewModel>(
         }
         setupAdapters()
         readArgsAndInit()
+        updateCompletionDialog(isComplete = false)
+        binding.showWin.gone()
         startCountDown()
 
         val bitmap = viewModelActivity.cosplayBitmap
@@ -154,8 +161,7 @@ class ShowFragment : BaseFragment<FragmentShowBinding, ShowViewModel>(
     // Thêm hàm showFailLayout
     private fun showFailLayout() {
         if (!isAdded || isDetached) return
-        timerJob?.cancel()
-        navigateToSuccess()
+        showResultDialog(isComplete = false)
     }
     private fun startCountDown() {
         binding.actionBar.cvLogo.isEnabled = false
@@ -281,10 +287,10 @@ class ShowFragment : BaseFragment<FragmentShowBinding, ShowViewModel>(
 //            actionBar.btnActionBarRight.onClick { navigateToSuccess() }
 
             materialSmall.onClick {
-                percent.text = "${viewModel.state.value.matchPercent}%"
                 imgShowBig.visible()
             }
             close.onClick { imgShowBig.gone() }
+            frameNextDialog.onClick { navigateToSuccess() }
 
 
 
@@ -336,10 +342,34 @@ class ShowFragment : BaseFragment<FragmentShowBinding, ShowViewModel>(
     // ShowFragment.observeData() — THÊM guard này
     // ✅ FIX — thêm flag giống CustomizeFragment
     private var hasTriggeredReInit = false
+
+    private fun updateCompletionDialog(isComplete: Boolean) {
+        binding.apply {
+
+            imgAvatarDialog.setImageResource(
+                if (isComplete) R.drawable.avatar_win else R.drawable.avatar_lost
+            )
+            bgTiltleDialog.setImageResource(
+                if (isComplete) R.drawable.bg_tittle_win else R.drawable.bg_tittle_lost
+            )
+            txtNextDialog.setText(
+                if (isComplete) R.string.cosplay_complete else R.string.not_matched
+            )
+            txtTittle.setText(
+                if (isComplete) R.string.victory else R.string.you_lose
+            )
+        }
+    }
+
+    private fun showResultDialog(isComplete: Boolean) {
+        timerJob?.cancel()
+        updateCompletionDialog(isComplete)
+        binding.showWin.visible()
+    }
+
     private fun showWinLayout() {
         if (!isAdded || isDetached) return
-        timerJob?.cancel()
-
+        showResultDialog(isComplete = true)
     }
     override fun observeData() {
 
@@ -491,6 +521,7 @@ class ShowFragment : BaseFragment<FragmentShowBinding, ShowViewModel>(
             if (navPos < arrShowColor.size && arrShowColor[navPos]) {
                 binding.llColor.animate().alpha(1f).setDuration(150).withStartAction {
                     binding.llColor.visibility = View.VISIBLE
+                    binding.imgChangColor.visibility = View.VISIBLE
                 }.start()
             } else {
 //                binding.imgChangColor.invisible()
@@ -501,6 +532,7 @@ class ShowFragment : BaseFragment<FragmentShowBinding, ShowViewModel>(
         } else {
             binding.llColor.animate().alpha(0f).setDuration(150).withEndAction {
                 binding.llColor.visibility = View.GONE
+                binding.imgChangColor.visibility = View.GONE
             }.start()
         }
 
@@ -529,8 +561,36 @@ class ShowFragment : BaseFragment<FragmentShowBinding, ShowViewModel>(
     // ── PROGRESS (giống ShowActivity.updateMatchUI) ───────────────────────────
 
     private fun updateMatchUI(percent: Int) {
-        binding.percent.text = "${percent.coerceIn(0, 100)}%"
-//        binding.tvPercent.text = "$percent%"
+        val safePercent = percent.coerceIn(0, 100)
+        val starCount = when (percent) {
+            0 -> 0
+            in 1..20 -> 1
+            in 21..40 -> 2
+            in 41..70 -> 3
+            in 71..98 -> 4
+            in 99..100 -> 5
+            else -> 0
+        }
+
+        binding.ll1.rating = starCount.toFloat()
+
+        // 0% = bias 1 (bottom), 100% = bias 0 (top).
+        val targetBias = 1f - safePercent / 100f
+        val currentBias =
+            (binding.imgStar.layoutParams as ConstraintLayout.LayoutParams).verticalBias
+
+        starAnimator?.cancel()
+        starAnimator = ValueAnimator.ofFloat(currentBias, targetBias).apply {
+            duration = 400L
+            interpolator = DecelerateInterpolator()
+            addUpdateListener { animator ->
+                binding.imgStar.updateLayoutParams<ConstraintLayout.LayoutParams> {
+                    verticalBias = animator.animatedValue as Float
+                }
+            }
+            start()
+        }
+        binding.tvPercent.text = "$percent%"
 //
 //        // Animate progress fill (scaleY từ 0→1 theo %)
 //        binding.progressTrack.post {
@@ -593,6 +653,8 @@ class ShowFragment : BaseFragment<FragmentShowBinding, ShowViewModel>(
             hasNavigatedToSuccess = false
             viewModel.reset()
             hasTriggeredReInit = false
+            updateCompletionDialog(isComplete = false)
+            binding.showWin.gone()
 
             // Clear tất cả layer
             layerViews.forEach { Glide.with(binding.rlCharacter).clear(it) }
@@ -637,6 +699,8 @@ class ShowFragment : BaseFragment<FragmentShowBinding, ShowViewModel>(
         }
     }
     override fun onDestroyView() {
+        starAnimator?.cancel()
+        starAnimator = null
         super.onDestroyView()
         timerJob?.cancel()
     }

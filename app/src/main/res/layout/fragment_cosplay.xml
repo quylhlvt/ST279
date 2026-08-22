@@ -25,21 +25,23 @@
             android:layout_height="match_parent"
             app:strokeWidth="@dimen/dimension_0"
             app:cardBackgroundColor="@color/white"
-            android:layout_margin="@dimen/dimension_6"
+            android:layout_marginHorizontal="@dimen/dimension_6"
+            android:layout_marginTop="@dimen/dimension_6"
+            android:layout_marginBottom="@dimen/dimension_8"
             app:cardCornerRadius="@dimen/dimension_16"
             >
             <ImageView
                 android:id="@+id/imvImage"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-
+                android:foreground="@drawable/forgound_random"
                 android:src="@drawable/img_permission" />
             <ImageView
                 android:id="@+id/imageGif"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="fitCenter"
+                android:foreground="@drawable/forgound_random"
                 android:visibility="gone" />
         </com.google.android.material.card.MaterialCardView>
 

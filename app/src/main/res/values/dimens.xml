@@ -8,6 +8,7 @@
     <dimen name="dimension_1_8">1.8dp</dimen>
     <dimen name="dimension_1_25">1.25dp</dimen>
     <dimen name="dimension_2">2dp</dimen>
+    <dimen name="dimension_2_">-2dp</dimen>
     <dimen name="dimension_2_5">2.5dp</dimen>
     <dimen name="dimension_3">3dp</dimen>
     <dimen name="dimension_3_5">3.5dp</dimen>
@@ -31,6 +32,7 @@
     <dimen name="dimension_19">19dp</dimen>
     <dimen name="dimension_20">20dp</dimen>
     <dimen name="dimension_20_1">20dp</dimen>
+    <dimen name="dimension_5_minus">-5dp</dimen>
     <dimen name="dimension_22">22dp</dimen>
     <dimen name="dimension_23">23dp</dimen>
     <dimen name="dimension_24">24dp</dimen>
@@ -38,6 +40,7 @@
     <dimen name="dimension_26">26dp</dimen>
     <dimen name="dimension_27">27dp</dimen>
     <dimen name="dimension_28">28dp</dimen>
+    <dimen name="dimension_28_draw">38dp</dimen>
     <dimen name="dimension_30">30dp</dimen>
     <dimen name="dimension_32">32dp</dimen>
     <dimen name="dimension_34">34dp</dimen>

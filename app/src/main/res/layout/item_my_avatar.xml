@@ -66,7 +66,7 @@
             app:layout_constraintTop_toTopOf="parent"
             android:layout_width="@dimen/dimension_30"
             android:layout_height="@dimen/dimension_30"
-            android:src="@drawable/ic_delete" />
+            android:src="@drawable/ic_delete1" />
 
         <!--        btnEdit-->
         <ImageView

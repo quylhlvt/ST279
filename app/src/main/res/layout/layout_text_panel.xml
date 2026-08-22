@@ -8,14 +8,19 @@
     android:orientation="vertical"
     android:layout_marginStart="@dimen/dimension_16"
     android:visibility="gone">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimension_0"
+        app:layout_constraintDimensionRatio="3.6:0.18"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/view"/>
     <ScrollView
         android:elevation="@dimen/dimension_1"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimension_0"
         android:scrollbars="none"
-        android:layout_marginTop="@dimen/dimension_8"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnDoneText">
+        app:layout_constraintTop_toBottomOf="@+id/view">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -33,7 +38,7 @@
                 style="@style/single_marquee"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/carter_one_regular"
+                android:fontFamily="@font/pacifico_regular"
                 android:gravity="center"
                 android:text="@string/text"
                 android:id="@+id/txtText"
@@ -71,7 +76,7 @@
                 style="@style/single_marquee"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/carter_one_regular"
+                android:fontFamily="@font/pacifico_regular"
                 android:gravity="center"
                 android:text="@string/font"
                 android:id="@+id/txtFont"
@@ -96,7 +101,7 @@
                 style="@style/single_marquee"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/carter_one_regular"
+                android:fontFamily="@font/pacifico_regular"
                 android:gravity="center"
                 android:text="@string/color"
                 android:id="@+id/txtColor"

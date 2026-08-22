@@ -27,6 +27,7 @@ import com.ava.R
 import com.ava.core.extention.InternetExtension.isInternetAvailable
 import com.ava.core.extention.InternetExtension.isNetworkConnected
 import com.ava.core.extention.changeText
+import com.ava.core.extention.setTextActionBar
 import com.ava.databinding.FragmentCosplayBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
@@ -130,6 +131,7 @@ class CosplayFragment : BaseFragment<FragmentCosplayBinding, CosplayViewModel>(
             tvCenter.select()
             setImageActionBar(btnActionBarLeft, R.drawable.back_app)
             setImageActionBar(btnActionBarRight, R.drawable.guid)
+            setTextActionBar(tvCenter, getString(R.string.cosplay))
         }
     }
 

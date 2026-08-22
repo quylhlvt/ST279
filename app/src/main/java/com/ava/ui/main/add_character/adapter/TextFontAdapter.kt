@@ -19,7 +19,7 @@ class TextFontAdapter(val context: Context) : BaseAdapter<SelectedAddModel, Item
         binding.apply {
             if (item.isSelected) {
                 frame.apply {
-                    strokeColor = ContextCompat.getColor(context, R.color.app_color2)
+                    strokeColor = ContextCompat.getColor(context, R.color.app_color)
                 }
             } else {
                 frame.apply {

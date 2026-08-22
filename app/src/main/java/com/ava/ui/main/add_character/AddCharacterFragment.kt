@@ -54,6 +54,7 @@ import com.ava.ui.main.add_character.adapter.StickerCategoryAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ava.core.custom.DrawView
 import com.ava.core.extention.InternetExtension
+import com.ava.core.extention.setMaterialCardViewActionBar1
 import com.ava.data.datalocal.manager.CharacterImageManager
 import com.ava.ui.main.add_character.adapter.BackgroundImageAdapter
 import com.ava.ui.main.add_character.adapter.SpeechAdapter
@@ -251,7 +252,7 @@ class AddCharacterFragment : BaseFragment<FragmentAddCharacterBinding, AddCharac
             // Action bar
             actionBar.btnActionBarLeft.onClick { confirmExit() }
             actionBar.btnActionBarCenter1.onClick { confirmReset() }
-            actionBar.btnActionBarRight.onClick {handleSave()}
+            actionBar.btnActionBarRightText.onClick {handleSave()}
 
             // Background tabs
             lnlBackground.btnBackgroundImage.onClick {
@@ -501,8 +502,12 @@ class AddCharacterFragment : BaseFragment<FragmentAddCharacterBinding, AddCharac
     private fun initActionBar() {
         binding.actionBar.apply {
             setImageActionBar(btnActionBarLeft, R.drawable.back_app)
-//            setImageActionBar(btnActionBarCenter1, R.drawable.ic_reset_all_custom)
-            setImageActionBar(btnActionBarRight, R.drawable.save_background)
+            setImageActionBar(btnActionBarCenter1, R.drawable.ic_reset_all_custom)
+            setMaterialCardViewActionBar1(
+                btnActionBarRightText,
+                tvRightText,
+                getString(R.string.save)
+            )
         }
     }
 

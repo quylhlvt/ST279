@@ -120,10 +120,10 @@ open class DrawView(context: Context, attrs: AttributeSet?, defStyleAttr: Int) :
             )
             borderPaint.alpha = typedArray.getInteger(R.styleable.StickerView_borderAlpha, 255)
             borderPaint.style = Paint.Style.STROKE
-            borderPaint.strokeWidth = dpToPx(5)
+            borderPaint.strokeWidth = dpToPx(7)
             borderPaint.strokeJoin = Paint.Join.ROUND
             borderPaint.strokeCap = Paint.Cap.ROUND
-            borderPaint.pathEffect = DashPathEffect(floatArrayOf(40f, 55f), 0f)
+            borderPaint.pathEffect = DashPathEffect(floatArrayOf(20f, 35f), 0f)
 
             setupDefaultIcons()
         } finally {
@@ -729,11 +729,11 @@ open class DrawView(context: Context, attrs: AttributeSet?, defStyleAttr: Int) :
                         DrawKey.LEFT_BOTTOM -> setupMatrix(icon, x3, y3, rotation)
                         DrawKey.RIGHT_BOTTOM -> setupMatrix(icon, x4, y4, rotation)
                     }
-                    if (icon.positionDefault == DrawKey.TOP_LEFT) {
+                    if (icon.positionDefault == DrawKey.LEFT_BOTTOM) {
                         if (handlingDraw!!.isText) {
 
                         }
-                    } else if (icon.positionDefault == DrawKey.LEFT_BOTTOM) {
+                    } else if (icon.positionDefault == DrawKey.RIGHT_TOP) {
                         if (!handlingDraw!!.isCharacter) {
                             icon.draw(canvas, borderPaint,context)
                         }
@@ -751,7 +751,7 @@ open class DrawView(context: Context, attrs: AttributeSet?, defStyleAttr: Int) :
         icon.getMatrix().reset()
         // Scale icons using the screen-specific dimension (28dp phone,
         // 42dp on sw600dp tablets) instead of a hard-coded size.
-        val targetSizePx = resources.getDimensionPixelSize(R.dimen.dimension_28).toFloat()
+        val targetSizePx = resources.getDimensionPixelSize(R.dimen.dimension_28_draw).toFloat()
         val scaleX = targetSizePx / icon.width
         val scaleY = targetSizePx / icon.height
         val scale = minOf(scaleX, scaleY) // Giữ tỷ lệ aspect ratio
@@ -1001,7 +1001,7 @@ open class DrawView(context: Context, attrs: AttributeSet?, defStyleAttr: Int) :
 
     private fun setupDefaultIcons() {
         val deleteIcon = BitmapDrawIcon(
-            ContextCompat.getDrawable(context, R.drawable.ic_close), DrawKey.LEFT_BOTTOM
+            ContextCompat.getDrawable(context, R.drawable.ic_close), DrawKey.RIGHT_TOP
         )
         deleteIcon.event = DeleteEvent()
         val zoomIcon = BitmapDrawIcon(
@@ -1009,11 +1009,11 @@ open class DrawView(context: Context, attrs: AttributeSet?, defStyleAttr: Int) :
         )
         zoomIcon.event = ZoomEvent()
         val flipIcon = BitmapDrawIcon(
-            ContextCompat.getDrawable(context, R.drawable.ic_flip_add), DrawKey.RIGHT_TOP
+            ContextCompat.getDrawable(context, R.drawable.ic_flip_add), DrawKey.TOP_LEFT
         )
         flipIcon.event = FlipEvent()
         val editIcon = BitmapDrawIcon(
-            ContextCompat.getDrawable(context, R.drawable.ic_close), DrawKey.TOP_LEFT
+            ContextCompat.getDrawable(context, R.drawable.ic_close), DrawKey.LEFT_BOTTOM
         )
         editIcon.event = EditEvent()
         iconList.clear()

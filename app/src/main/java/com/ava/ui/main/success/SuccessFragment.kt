@@ -20,6 +20,7 @@ import com.ava.core.extention.loadImage
 import com.ava.core.extention.onClick
 import com.ava.core.extention.onClick1
 import com.ava.core.extention.setImageActionBar
+import com.ava.core.extention.setTextActionBar
 import com.ava.core.extention.visible
 import com.ava.core.helper.PermissionRequestHelper
 import com.ava.databinding.FragmentSuccessBinding
@@ -127,6 +128,7 @@ class SuccessFragment : BaseFragment<FragmentSuccessBinding, SuccessViewModel>(
                 visible();}
             setImageActionBar(actionBar.btnActionBarNextToRight, R.drawable.ic_share_success)
             setImageActionBar(actionBar.btnActionBarRight, R.drawable.ic_home)
+            setTextActionBar(actionBar.tvCenter, getString(R.string.successfully))
             tvSuccess.isSelected = true
         }
     }

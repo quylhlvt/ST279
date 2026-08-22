@@ -52,9 +52,6 @@ class DialogSpeech(
             tvGetText.setFont(textFont)
             tvGetText.setTextColor(textColor)
             tvGetText.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSizePx)
-            rcvFontSpeech.adapter = fontAdapter
-            rcvColorSpeech.adapter = colorAdapter
-            sizeSlider.progress = textSizeProgress
             fontAdapter.submitListReset(fonts)
             colorAdapter.submitListReset(colors)
             edtSpeech.isFocusableInTouchMode = true
@@ -90,10 +87,7 @@ class DialogSpeech(
                     selectColor(color, 0)
                 }
             }
-            sizeSlider.onProgressChanged = { progress ->
-                textSizeProgress = progress
-                applyTextSize(progress)
-            }
+
             edtSpeech.setOnKeyListener { _, keyCode, event ->
                 if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_DOWN) {
                     handleDone()
