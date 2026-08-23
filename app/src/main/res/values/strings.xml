@@ -1,6 +1,6 @@
 <resources>
     <string name="size_slider">Size</string>
-    <string name="app_name">Avatar Maker: High School OC</string>
+    <string name="app_name">Anime OC Maker</string>
     <string name="next">Next\u00A0</string>
     <string name="language">Language</string>
     <string name="title_1">\u00A0Turn Your Ideas into Anime Magic\u00A0</string>
@@ -9,7 +9,6 @@
     <string name="not_select_lang">Please select a language</string>
     <string name="pony_maker">Anime Maker</string>
     <string name="cat_random">Anime Random</string>
-    <string name="feature_not_available">This feature is not available yet</string>
     <string name="permission">Permission</string>
     <string name="storage">Storage\u00A0</string>
     <string name="continue_per">\u00A0Continue\u00A0</string>
@@ -30,7 +29,7 @@
     <string name="no">No</string>
     <string name="yes">Yes</string>
     <string name="null_edt">Please enter text</string>
-    <string name="choose_color">CHOOSE COLOR</string>
+    <string name="choose_color">Choose color</string>
     <string name="do_you_want_to_reset_all">Do you want to reset all?</string>
     <string name="reset">Reset</string>
     <string name="exit">Exit</string>
@@ -109,30 +108,17 @@
     <string name="tvCosplay7">percentage score (%).</string>
     <string name="tvCosplay8">The closer your character looks to the random image, the higher your final score will be. Pay attention to small details to achieve the best cosplay result.</string>
     <string name="save">Save</string>
-    <string name="please_watch_full_ads">Please Watch Full Ads</string>
-    <string name="watch_ad">Watch Ad</string>
     <string name="error">Error</string>
     <string name="errorcontent">This item is no longer available.</string>
-    <string name="load_ads_fail">Load Ads Fail</string>
-    <string name="random_chibi_dialog">Random Chibi</string>
-    <string name="watch_a_short_ad_to_generate_a_random_chibi">Watch a short ad to generate a random chibi.</string>
-    <string name="challenge_food">Cosplay</string>
-    <string name="food_random">Lucky Roll</string>
-    <string name="my_food">My Food</string>
     <string name="facebook_share">Facebook Share</string>
     <string name="instagram_share">Instagram Share</string>
-    <string name="congratulation">CONGRATULATION!!!</string>
-    <string name="congratulations_on_completing_the_challenge">Congratulations on\ncompleting the challenge!!!</string>
-    <string name="oops">OOPS... :((</string>
-    <string name="keep_trying_harder">Keep trying harder!!!</string>
     <string name="bubbles">Bubbles</string>
-    <string name="loading_point">Loading...</string>
     <string name="edit">Edit</string>
-    <string name="click_the_random_button_below_to_see_what_your_character_is">Click the random button below to see what your character is!</string>
-    <string name="tvCosplay">Players receive a random reference image and must recreate the character by choosing matching hairstyles, outfits, colors, and accessories. Each correct choice increases the percentage score the closer the character matches the image, the higher the final score.</string>
     <string name="font">Font</string>
     <string name="not_matched">Not Matched</string>
     <string name="cosplay_complete">Cosplay Complete!</string>
     <string name="you_lose">You Lose!</string>
     <string name="victory">Victory</string>
+    <string name="done">Done</string>
+    <string name="please_wait">Please wait...</string>
 </resources>

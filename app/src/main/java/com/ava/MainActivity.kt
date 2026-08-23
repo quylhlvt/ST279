@@ -170,7 +170,8 @@ class MainActivity : AppCompatActivity() , LoadingController{
 
             if (showButtons) {
                 binding.txtContent.visible()
-                binding.animationView.gone()
+                binding.progressBar.gone()
+                binding.txtPlease.gone()
 
                 if (onOk != null) {
                     // ← chế độ OK only
@@ -191,7 +192,8 @@ class MainActivity : AppCompatActivity() , LoadingController{
                 binding.btnNo.gone()
                 binding.btnOk.gone()
                 binding.txtContent.gone()
-                binding.animationView.visible()
+                binding.progressBar.visible()
+                binding.txtPlease.visible()
             }
 
             setCancelable(cancelable)

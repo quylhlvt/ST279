@@ -2,7 +2,7 @@
 <!-- values-es/strings.xml -->
 <resources>
     <string name="size_slider">Tamaño</string>
-    <string name="app_name">Avatar Maker: High School OC</string>
+    <string name="app_name">Anime OC Maker</string>
     <string name="next">Siguiente\u00A0</string>
     <string name="language">Idioma</string>
     <string name="title_1">\u00A0Descubre tu estilo elegante y con clase\u00A0</string>
@@ -106,18 +106,18 @@
     <string name="tvCosplay8">Cuanto más se parezca tu personaje a la imagen aleatoria, mayor será tu puntuación final. Presta atención a los pequeños detalles para lograr el mejor resultado de cosplay.</string>
 
     <string name="save">Guardar</string>
-    <string name="please_watch_full_ads">Mira el anuncio completo</string>
-    <string name="watch_ad">Ver anuncio</string>
     <string name="error">Error</string>
     <string name="errorcontent">Este elemento ya no está disponible.</string>
-    <string name="load_ads_fail">No se pudo cargar el anuncio</string>
-    <string name="random_chibi_dialog">Chibi aleatorio</string>
-    <string name="watch_a_short_ad_to_generate_a_random_chibi">Mira un anuncio corto para generar un chibi aleatorio.</string>
     <string name="image_not_found">Imagen no encontrada</string><string name="facebook_not_available">Facebook no está instalado o no puede recibir esta imagen</string><string name="instagram_not_available">Instagram no está instalado o no puede recibir esta imagen</string><string name="share_failed">No se pudo compartir la imagen. Inténtalo de nuevo.</string>
-    <string name="challenge_food">Cosplay</string><string name="food_random">Tirada de la suerte</string><string name="my_food">Mi comida</string><string name="facebook_share">Compartir en Facebook</string><string name="instagram_share">Compartir en Instagram</string>
-    <string name="congratulation">¡¡¡FELICIDADES!!!</string><string name="congratulations_on_completing_the_challenge">¡Felicidades por\ncompletar el desafío!</string><string name="oops">UPS... :((</string><string name="keep_trying_harder">¡Sigue esforzándote!</string><string name="bubbles">Burbujas</string>
-    <string name="loading_point">Cargando...</string>
+    <string name="facebook_share">Compartir en Facebook</string><string name="instagram_share">Compartir en Instagram</string>
+    <string name="bubbles">Burbujas</string>
     <string name="edit">Editar</string>
-    <string name="click_the_random_button_below_to_see_what_your_character_is">¡Pulsa el botón aleatorio de abajo para ver cómo será tu personaje!</string>
-    <string name="tvCosplay">Los jugadores reciben una imagen de referencia aleatoria y deben recrear el personaje eligiendo peinados, atuendos, colores y accesorios que coincidan. Cada elección correcta aumenta el porcentaje de puntuación. Cuanto más se parezca el personaje a la imagen, mayor será la puntuación final.</string>
+    <string name="cat_random">Anime aleatorio</string>
+    <string name="font">Fuente</string>
+    <string name="not_matched">Sin coincidencia</string>
+    <string name="cosplay_complete">¡Cosplay completado!</string>
+    <string name="you_lose">¡Has perdido!</string>
+    <string name="victory">Victoria</string>
+    <string name="done">Listo</string>
+    <string name="please_wait">Espera...</string>
 </resources>

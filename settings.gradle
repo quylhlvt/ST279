@@ -34,5 +34,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "ST287 Avatar Maker High School OC"
+rootProject.name = "ST279 Anime OC Maker"
 include ':app'

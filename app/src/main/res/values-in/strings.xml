@@ -2,7 +2,7 @@
 <!-- values-id/strings.xml -->
 <resources>
     <string name="size_slider">Ukuran</string>
-    <string name="app_name">Avatar Maker: High School OC</string>
+    <string name="app_name">Anime OC Maker</string>
     <string name="next">Lanjut\u00A0</string>
     <string name="language">Bahasa</string>
     <string name="title_1">\u00A0Tampilkan gayamu yang modis &amp; berkelas\u00A0</string>
@@ -105,18 +105,18 @@
     <string name="tvCosplay7">persentase skor (%).</string>
     <string name="tvCosplay8">Semakin mirip karaktermu dengan gambar acak tersebut, semakin tinggi skor akhir yang akan kamu dapatkan. Perhatikan detail kecil untuk mendapatkan hasil cosplay terbaik.</string>
     <string name="save">Simpan</string>
-    <string name="please_watch_full_ads">Silakan tonton iklan sampai selesai</string>
-    <string name="watch_ad">Tonton iklan</string>
     <string name="error">Kesalahan</string>
     <string name="errorcontent">Item ini sudah tidak tersedia.</string>
-    <string name="load_ads_fail">Gagal memuat iklan</string>
-    <string name="random_chibi_dialog">Chibi acak</string>
-    <string name="watch_a_short_ad_to_generate_a_random_chibi">Tonton iklan singkat untuk membuat chibi acak.</string>
     <string name="image_not_found">Gambar tidak ditemukan</string><string name="facebook_not_available">Facebook tidak terpasang atau tidak dapat menerima gambar ini</string><string name="instagram_not_available">Instagram tidak terpasang atau tidak dapat menerima gambar ini</string><string name="share_failed">Tidak dapat membagikan gambar. Silakan coba lagi.</string>
-    <string name="challenge_food">Cosplay</string><string name="food_random">Putaran Keberuntungan</string><string name="my_food">Makanan Saya</string><string name="facebook_share">Bagikan ke Facebook</string><string name="instagram_share">Bagikan ke Instagram</string>
-    <string name="congratulation">SELAMAT!!!</string><string name="congratulations_on_completing_the_challenge">Selamat telah\nmenyelesaikan tantangan!!!</string><string name="oops">UPS... :((</string><string name="keep_trying_harder">Terus berusaha lebih keras!!!</string><string name="bubbles">Gelembung</string>
-    <string name="loading_point">Memuat...</string>
+    <string name="facebook_share">Bagikan ke Facebook</string><string name="instagram_share">Bagikan ke Instagram</string>
+    <string name="bubbles">Gelembung</string>
     <string name="edit">Edit</string>
-    <string name="click_the_random_button_below_to_see_what_your_character_is">Klik tombol acak di bawah untuk melihat karaktermu!</string>
-    <string name="tvCosplay">Pemain menerima gambar referensi acak dan harus membuat ulang karakter dengan memilih gaya rambut, pakaian, warna, dan aksesori yang sesuai. Setiap pilihan yang benar meningkatkan persentase skor. Semakin mirip karakter dengan gambar, semakin tinggi skor akhirnya.</string>
+    <string name="cat_random">Anime Acak</string>
+    <string name="font">Font</string>
+    <string name="not_matched">Tidak Cocok</string>
+    <string name="cosplay_complete">Cosplay Selesai!</string>
+    <string name="you_lose">Kamu Kalah!</string>
+    <string name="victory">Kemenangan</string>
+    <string name="done">Selesai</string>
+    <string name="please_wait">Harap tunggu...</string>
 </resources>

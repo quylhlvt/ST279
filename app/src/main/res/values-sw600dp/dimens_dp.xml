@@ -11,12 +11,14 @@
     <dimen name="dimension_2_">-3dp</dimen>
     <dimen name="dimension_2_5">3.75dp</dimen>
     <dimen name="dimension_3">4.5dp</dimen>
+    <dimen name="dimension_3_minus">-4.5dp</dimen>
     <dimen name="dimension_3_5">5.25dp</dimen>
     <dimen name="dimension_4">6dp</dimen>
     <dimen name="dimension_5">7.5dp</dimen>
     <dimen name="dimension_6">9dp</dimen>
     <dimen name="dimension_7">10.5dp</dimen>
     <dimen name="dimension_8">12dp</dimen>
+    <dimen name="dimension_8_minus">-12dp</dimen>
     <dimen name="dimension_8_1">20dp</dimen>
     <dimen name="dimension_10">15dp</dimen>
     <dimen name="dimension_10_1">18dp</dimen>

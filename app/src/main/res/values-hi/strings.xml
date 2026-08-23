@@ -2,7 +2,7 @@
 <!-- values-hi/strings.xml -->
 <resources>
     <string name="size_slider">आकार</string>
-    <string name="app_name">Avatar Maker: High School OC</string>
+    <string name="app_name">Anime OC Maker</string>
     <string name="next">आगे\u00A0</string>
     <string name="language">भाषा</string>
     <string name="title_1">\u00A0अपना स्टाइलिश और शानदार लुक पाएं\u00A0</string>
@@ -105,18 +105,18 @@
     <string name="tvCosplay7">प्रतिशत स्कोर (%) को बढ़ाता है।</string>
     <string name="tvCosplay8">आपका कैरेक्टर जितना अधिक रैंडम इमेज जैसा दिखेगा, आपका अंतिम स्कोर उतना ही अधिक होगा। सबसे अच्छा कॉसप्ले परिणाम पाने के लिए छोटी-छोटी बातों पर ध्यान दें।</string>
     <string name="save">सहेजें</string>
-    <string name="please_watch_full_ads">कृपया पूरा विज्ञापन देखें</string>
-    <string name="watch_ad">विज्ञापन देखें</string>
     <string name="error">त्रुटि</string>
     <string name="errorcontent">यह आइटम अब उपलब्ध नहीं है।</string>
-    <string name="load_ads_fail">विज्ञापन लोड नहीं हो सका</string>
-    <string name="random_chibi_dialog">रैंडम चिबी</string>
-    <string name="watch_a_short_ad_to_generate_a_random_chibi">रैंडम चिबी बनाने के लिए एक छोटा विज्ञापन देखें।</string>
     <string name="image_not_found">चित्र नहीं मिला</string><string name="facebook_not_available">Facebook इंस्टॉल नहीं है या यह चित्र प्राप्त नहीं कर सकता</string><string name="instagram_not_available">Instagram इंस्टॉल नहीं है या यह चित्र प्राप्त नहीं कर सकता</string><string name="share_failed">चित्र शेयर नहीं किया जा सका। कृपया फिर से प्रयास करें।</string>
-    <string name="challenge_food">कॉसप्ले</string><string name="food_random">लकी रोल</string><string name="my_food">मेरा खाना</string><string name="facebook_share">Facebook पर शेयर करें</string><string name="instagram_share">Instagram पर शेयर करें</string>
-    <string name="congratulation">बधाई!!!</string><string name="congratulations_on_completing_the_challenge">चैलेंज पूरा करने पर\nबधाई!!!</string><string name="oops">उफ़... :((</string><string name="keep_trying_harder">और मेहनत करते रहें!!!</string><string name="bubbles">बुलबुले</string>
-    <string name="loading_point">लोड हो रहा है...</string>
+    <string name="facebook_share">Facebook पर शेयर करें</string><string name="instagram_share">Instagram पर शेयर करें</string>
+    <string name="bubbles">बुलबुले</string>
     <string name="edit">संपादित करें</string>
-    <string name="click_the_random_button_below_to_see_what_your_character_is">अपना कैरेक्टर देखने के लिए नीचे दिए रैंडम बटन पर क्लिक करें!</string>
-    <string name="tvCosplay">खिलाड़ियों को एक रैंडम रेफरेंस इमेज मिलती है और उन्हें मेल खाते हेयरस्टाइल, कपड़े, रंग और एक्सेसरीज़ चुनकर कैरेक्टर को फिर से बनाना होता है। हर सही चुनाव प्रतिशत स्कोर बढ़ाता है। कैरेक्टर जितना इमेज से मेल खाएगा, अंतिम स्कोर उतना ही अधिक होगा।</string>
+    <string name="cat_random">रैंडम एनीमे</string>
+    <string name="font">फ़ॉन्ट</string>
+    <string name="not_matched">मेल नहीं हुआ</string>
+    <string name="cosplay_complete">कॉसप्ले पूरा हुआ!</string>
+    <string name="you_lose">आप हार गए!</string>
+    <string name="victory">विजय</string>
+    <string name="done">पूर्ण</string>
+    <string name="please_wait">कृपया प्रतीक्षा करें...</string>
 </resources>

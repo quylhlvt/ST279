@@ -2,7 +2,7 @@
 <!-- values-de/strings.xml -->
 <resources>
     <string name="size_slider">Größe</string>
-    <string name="app_name">Avatar Maker: High School OC</string>
+    <string name="app_name">Anime OC Maker</string>
     <string name="next">Weiter\u00A0</string>
     <string name="language">Sprache</string>
     <string name="title_1">\u00A0Entdecke deinen stilvollen &amp; eleganten Look\u00A0</string>
@@ -105,27 +105,22 @@
     <string name="tvCosplay7">Prozentsatz (%).</string>
     <string name="tvCosplay8">Je ähnlicher dein Charakter dem Zufallsbild sieht, desto höher wird deine Endpunktzahl sein. Achte auf kleine Details, um das beste Cosplay-Ergebnis zu erzielen.</string>
     <string name="save">Speichern</string>
-    <string name="please_watch_full_ads">Bitte sehen Sie sich die vollständige Werbung an</string>
-    <string name="watch_ad">Werbung ansehen</string>
     <string name="error">Fehler</string>
     <string name="errorcontent">Dieses Element ist nicht mehr verfügbar.</string>
-    <string name="load_ads_fail">Werbung konnte nicht geladen werden</string>
-    <string name="random_chibi_dialog">Zufälliger Chibi</string>
-    <string name="watch_a_short_ad_to_generate_a_random_chibi">Sehen Sie sich eine kurze Werbung an, um einen zufälligen Chibi zu erstellen.</string>
     <string name="image_not_found">Bild nicht gefunden</string>
     <string name="facebook_not_available">Facebook ist nicht installiert oder kann dieses Bild nicht empfangen</string>
     <string name="instagram_not_available">Instagram ist nicht installiert oder kann dieses Bild nicht empfangen</string>
     <string name="share_failed">Das Bild konnte nicht geteilt werden. Bitte versuche es erneut.</string>
-    <string name="challenge_food">Cosplay</string>
-    <string name="food_random">Glückswurf</string>
-    <string name="my_food">Mein Essen</string>
     <string name="facebook_share">Auf Facebook teilen</string>
     <string name="instagram_share">Auf Instagram teilen</string>
-    <string name="congratulation">GLÜCKWUNSCH!!!</string>
-    <string name="congratulations_on_completing_the_challenge">Glückwunsch zum\nAbschluss der Challenge!!!</string>
-    <string name="oops">UPS... :((</string><string name="keep_trying_harder">Versuche es weiter!!!</string><string name="bubbles">Blasen</string>
-    <string name="loading_point">Wird geladen...</string>
+    <string name="bubbles">Blasen</string>
     <string name="edit">Bearbeiten</string>
-    <string name="click_the_random_button_below_to_see_what_your_character_is">Klicke unten auf die Zufallsschaltfläche, um deinen Charakter zu sehen!</string>
-    <string name="tvCosplay">Die Spieler erhalten ein zufälliges Referenzbild und müssen den Charakter nachbilden, indem sie passende Frisuren, Outfits, Farben und Accessoires auswählen. Jede richtige Auswahl erhöht die Prozentpunktzahl. Je ähnlicher der Charakter dem Bild ist, desto höher ist die Endpunktzahl.</string>
+    <string name="cat_random">Anime zufällig</string>
+    <string name="font">Schriftart</string>
+    <string name="not_matched">Keine Übereinstimmung</string>
+    <string name="cosplay_complete">Cosplay abgeschlossen!</string>
+    <string name="you_lose">Du hast verloren!</string>
+    <string name="victory">Sieg</string>
+    <string name="done">Fertig</string>
+    <string name="please_wait">Bitte warten...</string>
 </resources>
